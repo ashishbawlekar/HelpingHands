@@ -1,0 +1,69 @@
+Storing Data Securely
+Sorting Methods based on Location
+Preventing unauthorized access
+// Family Friendly Volunteering
+Using Machine Learning to Detect Fake Accounts
+	This method relies on user-level activities and its account details. Unique features are extracted from recent user activities, then those features are applied to a classified that has been trained using machine learning techniques.
+	These features could be:
+		Average Clicks per Session
+		Average Session Length
+		No. of visited links
+		Content posted
+
+Option for Virtual Volunteering:
+	Volunteering opportunites that can be done from home sometimes with the help of a computer.
+
+Advanced Search:
+	Search based on keywords, distance, dates along with additional filters based on user's availability.
+
+Sorting Based on Organization:
+	Since some users prefer working for a trusted organization or a familiar one this option works best for those users.
+
+Sorting Based on City/Area:
+	Arranging information based on location provides a lot of usability benefits for users. It uses names of cities/areas to sort them. It is not very accurate but it is easy to understand and work with.
+
+GeoSorting:
+	GeoSorting is one of the methods to arrange data for user convenience. It used the physical distance in latitude and longitude from the user to the set of latitude's and longitudes to calulcate the distance between them. This method is easy to implement and works quick for small datasets. Also it is the most accurate method. 
+
+Postal Code Sorting
+	Since postal codes are universal and used everywhere, they can also be used to sort location data. Postal areas come in manageable sizes so accuracy to a certain extent is retained. There are many API's available for provide the distance between two postal codes so it is easy to work with as well.
+	
+Security:
+
+Techniques to Secure DB:
+	Use Web Application and DataBase Firewalls
+		DataBase can be protected against Security threats by using a firewall which denies access to traffic by default. Only traffic allowed through should come from specific application or web server that need to access the data. The firewall should also protect your DB from initiating outbound connections unless there is a specific need to do so.
+		In Addition to DataBase Firewall, a web application firewall should also be used to prevent against attacks such as SQL Injection Attacks directed at web application.
+	"Harden" the DB
+		Use the most up to date version of the DB S/W
+		Uninstall or disable any features or services that you don't use.
+		Ensure that none of the accounts have default passwords.
+	Encrypt the Data
+		It is a standard procedure in most organizations to encrypt stored data. It is equally important to ensure that the backups of the data is encrypted as well. Make sure the decryption keys are stored in an isolated system.
+	Minimise Value of DB
+		Avoid keeping data that doesn't need to be there. A compromised database can cause the least amount of damage that way.
+	Audit and Monitor DataBase Activity
+		Effective Monitoring allows us to track when an account has malicious intent or if the database has potential vulnerabilities.
+		DataBase Activity Monitoring S/W helps in this by providing monitoring which is independent of native databse logging and audit functions.		
+
+Storing Passwords:
+	If the passwords of an organization gets in the hand of an unauthorized user, they might cause unimaginable damage. Thus Storing passwords securely is a high priority task. 
+	Storing passwords in simple text is a big mistake as those transactions can be intercepted and texts can easily be extracted.
+	A simple solution to this is hashing the passwords before storing them in a database. Common Hashing algorithms are MD5/SHA1/SHA2. But hashing a common password still won't be useful. There are available prehashed lists of passwords which can be used to compare and find common passwords.
+	Another solution to that is add some extra text to the user password before storing it in the DB. This method is commanly known as adding "salt". But this method of using a predefined salt becomes vulnerable if/when the unauthorized person finds what the "salt" is.
+	The Solution to that is making the "salt" dynamic. This requires adding another DB table to keep track of salts as different users will have different salts.
+
+	Keeping the user data secure is high priority and Since this is the first time we are handling user data, we decided to use tools that will make managing data much simpler.
+	We intent to use Google's Firebase, Backend as a Service product.
+	It charges a small fee but it takes using a Server out of the equation, has strong security features, works as Database and is a cloud platform which is the current world trend.
+	To list a few features of FireBase:
+		Real-Time: It uses Web-Sockets instead of HTTP requests to transfer data. That means all of the client's data syncs through a single connection as fast as the network can support it.
+		File Storage: It supports storing binary files (images, videos, etc). It has security rules to make sure the binary data cannot do any harm as well.
+		Authentication: It has built-in authentication (OAuth2) for Google, Facebook, Twitter and Github.
+		(Google and Facebook Authentications are what we intent to use.)
+		Advanced Indexing: It allows user-defined index optimization i.e. As long as it knows using what keys the data is going to be used, it will optimize the DataBase to make the query run faster.
+		Automated Backups: It provides automated backups for the data. 
+		Read/Write Control: Using FireBase we can control which users can write data into the DB, modify it or only read from it.
+		Statistics: It provides stats of the users in the app which can be used to further improve the app.
+
+

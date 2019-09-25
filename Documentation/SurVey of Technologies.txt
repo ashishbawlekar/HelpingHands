@@ -1,0 +1,106 @@
+1. What are the similar projects done in the past?
+2. What technologies were used by these projects?
+3. What technologies were implemented 
+	3.1 Features/ Functionalities
+	3.2 Security
+4. Comparitive Analysis:
+	4.1 What is lacking 
+	4.2 What could be done better
+5. Methodology
+
+www.idealist.org // US- based Does not focus on Voluneering but on places time could be invested
+www.volunteermatch.org // US-based Paid service
+
+IVolunteer // 
+Good website, layout is good but in the world where everything is shifting towards applications and smartphones are becoming the norm for computing a website would surely not become popular among the youth.
+Donate My Time //
+UnReliable User Logins and User Data
+
+The overall concept of our project has been repeated in the past in the form of Websites and Smartphone Applications.
+Most of the websites we could find were foreign based and seemed outside the scope of the intended audience.
+Out of the few websites we could find 
+IVolunteer.org:
+	It was the most impressive. Established in 2001, it has over 10,000 volunteers and around 300+ organisations.
+In case of smartphone applications,
+There were a handful but the most noteworthy were,
+Donate My Time
+My Self-less Act:
+	This app is directly made from a website (www.myselflessact.com ). It includes motivational stories about people who have volunteered and quotes to encourage volunteering. It has a lot of options regarding the types of volunteering.
+
+GrassRoots 
+	This app is also made by downscaling a website.
+	This was developed in Chennai and the scope of this website and the application was around Chennai as well.
+
+Donate My Time
+	This was the most well made application.
+	The creators of this app had a website but the application is completely unrelated to it.
+	The website only serves to inform the user about the goals of the apps and the creator's ideologies.
+
+// Features 
+
+IVolunteer.org
+	It presents us with a huge list of events that are happening around us.
+	It has different methods of sorting(Distance, Area, Time, Organization) to show the events that are most relevant to us.
+	It has color codings to indicate events that are still needing and events that have met the volunteering requirement.
+	It has advanced search features.
+	They hold Volunteer Awards to encourage volunteering.
+
+My Self Less Acts
+	It provides a social media like network to form friends during the volunteering acts.
+	It has a wall to post images and write posts.
+	It has a messaging system for users to contact each other.
+	It also provides profile for both NGO's and Volunteers.
+
+GrassRoots
+	This app had a city wise sort for finding different NGO events.
+	Since the focus of only on Chennai, the size of the list was manageable.
+
+DonateMyTime
+	The app was well-made, the UI was consistent, easy to follow and understand.
+	The app presented the list of events of NGO's in the form of Cards.
+	It provided different methods of sorting the event lists.
+	There was also an option to directly view them on the Map to gauge how far the events are.
+
+// What Could be Done Better
+IVolunteer
+	Seeing as smartphones are becoming the norm in computing technologies, using a website seems out of place. Though website does provide a lot of useful features, the same features more or less can be provided through an android app.
+
+My Self-less act
+	That being said a website downscaled to an android app is not a good idea, as it just feels like scrolling through a webpage and misses out on the features provided by an application like not having to load a new page on every click, using different API's for interoperability between applications, etc.
+	A social media type network takes the focus out from volunteering and the messaging system may be misused as harrasment. 
+
+GrassRoots
+	This app too was downscaled through a website, 
+	It only had cities in Chennai and UI was very laggy.
+	We were unable to get past the register page and when we checked the reviews many people faced the same issue.
+
+Donate My Time
+	The UI was simple, too simple and bland.
+	This indicated that old technology was used to make this app.
+	It also had limited locations that could be accessed.
+
+// What could be done better
+
+An Application could be made using recent technologies, the UI could be made more fluid, less laggy and easy to understand. The number of locations that the app could work with could be increased. There was scope for improvement in the interoperability of apps. Use of images should be added and implemented without making the UI laggy.
+Different methods of sorting should be made available to the user. Focus of the app should be on volunteering and the user should not be bombarded with too many options as that only makes it more difficult to work with.
+Due to the threat of NGO's being spurious, there should exist a rating system which can be used to show that NGO's is genuine. There can also be a display of the NGO's past events along with photographs to further ascertain the authenticity of that organization. Users can be allowed to have profiles and rankings or medal to encourage volunteering.
+
+// Methodology
+
+To make the application UI smoother, more fluid and easy to understand, we intend to develop the application using a modern framework known as flutter.
+Interoperability of applications can be implemented by adding various API's, as needed, within the application.
+Rating system will be implemented as, out of 5 stars, where every NGO initially starts with 3 and it increases or decreases based on their activities.
+The information of the Events will be stored with their Time, Location, Organization, etc to facilitate users in showing relevant information.
+
+
+
+
+
+
+
+
+
+
+
+
+

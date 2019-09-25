@@ -1,0 +1,83 @@
+Problem Definition:
+There are over 1.2 billion people in India. With the unemployment rates doubling in the past couple years, it is clearly evident that we have a lot of free time on our hands. If this free time or atleast some of it, was utilized in helping others, the nation could be a much better place. With the rise of social media and the information age, there is an sufficient awareness about the anguish of people, there are many willing to help but have no idea where to start.
+There's also the problem of authenticity of organizations that they would like to help out but have no way of verifying without visiting there, which might not be the safest option. 
+
+So to summarize the problems tackled in this project are: 
+Helping Volunteers=> Helping volunteers volunteering by providing nearby events. 
+Helping NGOs => Helping NGOs congregate people for their events.
+Authenticity of NGOs => Using a rating system, to denote NGO authenticity as NGO which has higher number of reviews means many people have attended their activities and thus they must be genuine.
+
+
+Requirement Specification:
+The application that is to be developed is going to be able to solve problems for both NGOs and volunteers.
+It will ease aid volunteers by providing simple interface having information regarding vicinal events. 
+It will ease aid NGOs by providing simple interface to display information regarding their events and activities.
+It will assist in determining the authenticity of an NGO by determining how many activites they have held and how many people attended them.
+
+Techinal Feasibility:
+	Hardware Requirements:
+	A smartphone with 1GB RAM.
+
+	Software Requirements:
+	A smartphone with Android Version higher than Jelly Bean.
+	A smartphone with updated Google Play Store.
+
+
+Preliminary Product Description
+
+The following are the requirements that were accessed and fulfilled in our project.
+1. Simplified Registration: Providing a hassle-free and simple interface for both kind of users to register.
+2. Profiles and Logins : Providing easy methods to login (Gmail, Facebook, Phone Number) for users as well as providing profile pages for users.
+3. Optimised Search Results: Providing search results sorted based on vicinity of events to the user.
+4. Events: Providing interface for NGOs to create their events and volunteers to participate in them.
+5. Rating System: Providing rating system for NGOs to help others understand how well an NGO works and for the NGo to develop itself.
+6. Encouraging Volunteers: Providing motivational stories, written by volunteers themselves for other volunteers to encourage user activity.
+7. Achievements : Providing achievements to volunteers after they attend a certain number of events.
+
+NGO:
+NGO_ID
+NGO_Name
+NGO_Contact_No
+NGO_Description
+NGO_Logo
+NGO_Email
+NGO_Representative
+
+Volunteer:
+User_ID
+User_Name
+User_Contact_No
+User_Description
+User_Profile_Photo
+User_Email
+User_DOB
+User_Event_Count
+
+Events:
+Event_ID
+Event_Date
+Event_Time
+Event_Location
+Event_Description
+Event_Head
+NGO_ID
+
+Event_Volunteers:
+User_ID
+Event_ID
+
+Images:
+Owner_ID
+Image
+
+
+
+
+
+
+
+
+
+
+
+

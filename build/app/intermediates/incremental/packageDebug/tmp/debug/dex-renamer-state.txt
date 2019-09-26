@@ -1,0 +1,4 @@
+#Thu Sep 26 19:20:54 IST 2019
+base.0=/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

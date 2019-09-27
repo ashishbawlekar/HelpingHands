@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">984269576274-vmbluoakqq2lc3a90vvdqbpt6o6e4eq6.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://helping-hands-6389a.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">984269576274</string>
+    <string name="google_api_key" translatable="false">AIzaSyCr7yecBUfRj8TBT44FZTskktdHt-_qqGw</string>
+    <string name="google_app_id" translatable="false">1:984269576274:android:7bfd32930bda82c242a78b</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCr7yecBUfRj8TBT44FZTskktdHt-_qqGw</string>
+    <string name="google_storage_bucket" translatable="false">helping-hands-6389a.appspot.com</string>
+    <string name="project_id" translatable="false">helping-hands-6389a</string>
+</resources>

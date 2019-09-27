@@ -5,7 +5,7 @@ package com.example.helping_hands;
 
 public final class BuildConfig {
   public static final boolean DEBUG = Boolean.parseBoolean("true");
-  public static final String APPLICATION_ID = "com.example.helping_hands";
+  public static final String APPLICATION_ID = "com.helpinghands";
   public static final String BUILD_TYPE = "debug";
   public static final String FLAVOR = "";
   public static final int VERSION_CODE = 1;

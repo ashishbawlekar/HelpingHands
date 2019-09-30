@@ -8,6 +8,7 @@ MERGED from /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/H
 MERGED from [androidx.multidex:multidex:2.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/multidex-2.0.0.aar/a5de42a210f437643e465e525c2a2849/AndroidManifest.xml:17:1-22:12
 MERGED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-19:12
 MERGED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:shared_preferences] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:image_picker] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-22:12
 MERGED from [:image_crop] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_crop/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-10:12
 MERGED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
@@ -189,6 +190,8 @@ MERGED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/F
 MERGED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:image_picker] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:image_picker] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:image_crop] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_crop/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44

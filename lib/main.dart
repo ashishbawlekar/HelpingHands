@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:helping_hands/AnimationExampleBasic.dart';
+import 'package:get_it/get_it.dart';
+// import 'package:helping_hands/AnimationExampleBasic.dart';
 import 'package:helping_hands/HomeNGO.dart';
 import 'package:helping_hands/Login.dart';
 import 'package:helping_hands/Registration.dart';
@@ -33,7 +34,7 @@ static Route<dynamic> generateRoute(RouteSettings settings) {
   }
   }
 
-
+GetIt getIt = GetIt.asNewInstance();
 
 void main() => runApp(
    MaterialApp(

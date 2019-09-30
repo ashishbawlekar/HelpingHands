@@ -1,56 +1,118 @@
-import 'package:flare_flutter/flare_controller.dart';
+// import 'package:flare_flutter/flare_controller.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+// import 'package:flare_flutter/flare_controller.dart';
+// import 'package:flare_flutter/flare_controls.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:helping_hands/Registration.dart';
+import 'package:helping_hands/Authentication.dart';
+import 'package:helping_hands/HomeNGO.dart';
+// import 'package:helping_hands/Registration.dart';
+// import 'package:helping_hands/main.dart';
 // import 'package:toast/toast.dart';
-import 'RouteAnimation.dart';
+// import 'RouteAnimation.dart';
 import 'Authentication.dart';
 import 'package:flare_flutter/flare_actor.dart';
 
 
+class LoginVia extends AnimatedWidget{
+  final Animation<Offset> register;
+  final Animation<Color> registerColor;
+  final Animation<double> registerScale;
+  final AnimationController controller;
+  LoginVia({
+    Key key, 
+    @required this.register,
+    @required this.registerColor,
+    @required this.registerScale,
+    @required this.controller,
+    }):super(key : key, listenable: register);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+            // color: Colors.black,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                Transform.translate(
+                  offset: register.value,
+                    child: Transform.scale(
+                      scale: registerScale.value,
+                      child: RaisedButton(
+                      color: registerColor.value,
+                      // splashColor: Colors.red,
+                        onPressed: (){
+                          controller.forward();
+                          },
+                        child: Text("Register"),
+                  ),
+                    ),
+                )
+              ],
+            ),
+          );
+  }
+  
+}
 
 class Login extends StatefulWidget {
   @override
   _LoginState createState() => _LoginState();
 }
 
-// class SlideRoute extends PageRouteBuilder{
-//    Widget page;
-//    Offset offset;
-//    SlideRoute({this.page, this.offset}) : super(
-//      pageBuilder : (
-//        BuildContext context,
-//        Animation<double> animation,
-//        Animation<double> secondaryAnimation,
-//      ) => page, 
-//      transitionsBuilder : (
-//        BuildContext context,
-//        Animation<double> animation,
-//        Animation<double> secondaryAnimation,
-//        Widget child,
-//      ) => SlideTransition(
-//        position: Tween<Offset>(
-//          begin: offset,
-//          end: Offset.zero,
-//        ).animate(animation),
-//        child: child,
-//      ),
-//    );
 
-// }
-
-class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
+class _LoginState extends State<Login> with TickerProviderStateMixin {
   bool isVol = true;
   Animation<Offset> animG;
   Animation<Offset> animF;
   AnimationController controller;
+  AnimationController _controllerR;
+  Animation<Offset> _register;
+  Animation<Color> _registerColor;
+  Animation<double> _registerScale;
+
+  
   @override
   void initState() { 
     super.initState();
+    _controllerR = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: 500),
+    )
+    ..addListener((){
+      setState(() {
+        
+      });
+    })
+    ..addStatusListener((status){
+      if(status == AnimationStatus.completed){
+        print("Animation Started!");
+        _controllerR.reverse();
+      }else if(status == AnimationStatus.dismissed){
+        print("Animation Finished!");
+          Navigator.popAndPushNamed(context, "/Registration");       
+      }
+    });
+    
     controller = AnimationController(
       vsync: this,
       duration: Duration(seconds: 1),
     );
+
+    _register = Tween<Offset>(
+      begin: Offset.zero,
+      end: Offset(-40.0, 0)
+    ).animate(_controllerR);
+
+    _registerColor = ColorTween(
+      begin: Colors.green,
+      end: Colors.blue
+    ).animate(_controllerR);
+
+    _registerScale = Tween(
+      begin: 1.0,
+      end: 1.5
+    ).animate(_controllerR);
 
     animG = Tween<Offset>(
       begin: Offset.zero,
@@ -65,8 +127,16 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
     // controller.forward();
   }
   
+  
+  @override
+  void dispose() { 
+    controller.dispose();
+    _controllerR.dispose();
+    super.dispose();
+  }
   TextEditingController _email = new TextEditingController();
   TextEditingController _password = new TextEditingController();
+  // var registerAnim = "idle";
   var init, distance, stackElevation=10.0;
   @override
   Widget build(BuildContext context) {
@@ -98,21 +168,8 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
           height: 800.0,
           child: SingleChildScrollView(
             physics: ClampingScrollPhysics(),
-                    child: GestureDetector(
-              onPanStart: (DragStartDetails deets){
-                init = deets.globalPosition.dx;
-              },
-              onPanUpdate: (DragUpdateDetails deets){
-                distance = deets.globalPosition.dx - init;
-              },
-              onPanEnd: (var deets){
-                init = 0.0;
-                if(distance < -150 ){
-                   Navigator.push(context, SlideRoute(offset: Offset(1, 0),page: Registration())); 
-                }
-                distance=0.0;
-              },
-                      child: Container(
+                    child: Container(
+                      // color: Colors.green,
                 padding: EdgeInsets.only(top: 80.0, left: 10.0, right: 10.0),
                 decoration: BoxDecoration(
                // borderRadius: BorderRadius.all(Radius.circular(5.0)),
@@ -124,8 +181,11 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                   child:  Column(            
                       // mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Container(
-                          height: 30.0,
+                        LoginVia(
+                          register: _register,
+                          registerColor: _registerColor,
+                          registerScale: _registerScale,
+                          controller: _controllerR,
                         ),
                          Padding(
                            padding: const EdgeInsets.all(15.0),
@@ -313,13 +373,28 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
                           elevation: 20.0,
                           padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 15.0),
                           onPressed: (){
-                              String email = _email.text.toString();
+                              String email = _email.text.toString().trim();
                               String pass = _password.text.toString(); 
-                              EmailAuth ea = new EmailAuth();
-                              ea.signUpWithEmail(email, pass);
-                            // Navigator.popAndPushNamed(context, "/Registration");
-                          },
-                        ),
+                              // FirebaseUser currentUser;
+                              // Check if doc exists in NgoUsers before letting user get to NgoHome
+                              // To prevent people from seeing NGO page without having to sign up as NGO
+                              EmailAuth()
+                              ..signInWithEmail(email, pass)
+                              .then((currentUser){
+                                if(!isVol){
+                                Navigator.push(context,
+                                  MaterialPageRoute(
+                                   builder: (context) => HomeNgo(),
+                                  ),
+                                );
+                                }else{
+                                  print("Home Volunteer is under construction");
+                                }
+                              }).catchError((err){
+                                print(err);
+                                // print(err.);
+                              });
+                              }),
                         
                         RaisedButton(
                           child: isVol ? Text("as Volunteer") : Text("as NGO"),
@@ -364,7 +439,7 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
             ),
           ),
         ),
-        ),
+        
       );
   }
 }

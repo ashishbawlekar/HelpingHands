@@ -1,17 +1,25 @@
+import 'dart:async';
 import 'dart:core';
 import 'dart:io';
+// import 'dart:isolate';
 // import 'package:flutter/image_picker.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:helping_hands/Authentication.dart';
 import 'package:helping_hands/HomeNGO.dart';
+import 'package:helping_hands/UserData.dart';
 // import 'package:image_crop/image_crop.dart';
 import 'package:image_picker/image_picker.dart';
 import 'CropImage.dart';
 
 
-class UserLogo{
-  final logo;
-  UserLogo(this.logo);
-}
+// class UserLogo{
+//   final logo;
+//   UserLogo(this.logo);
+// }
 
 class NgoReg extends StatelessWidget {
   var init;
@@ -52,18 +60,45 @@ class NGO_Reg_Form extends StatefulWidget {
   _NGO_Reg_FormState createState() => _NGO_Reg_FormState();
 }
 
-class _NGO_Reg_FormState extends State<NGO_Reg_Form>{
+class _NGO_Reg_FormState extends State<NGO_Reg_Form> with SingleTickerProviderStateMixin{
   final _formKey = GlobalKey<FormState>();
   // final _cropKey = GlobalKey<CropState>();
-  TextEditingController ngoName;
-  TextEditingController ngoRepName;
-  TextEditingController ngoContact;
-  TextEditingController ngoTelephone;
-  TextEditingController ngoDescription;
-  TextEditingController ngoEmail;
-  TextEditingController ngoWebsite;
+  TextEditingController ngoName = TextEditingController();
+  TextEditingController ngoRepName = TextEditingController();
+  TextEditingController ngoContact = TextEditingController();
+  TextEditingController ngoTelephone = TextEditingController();
+  TextEditingController ngoDescription = TextEditingController();
+  TextEditingController ngoEmail = TextEditingController();
+  TextEditingController ngoPass = TextEditingController();
+  TextEditingController ngoRePass = TextEditingController();
+  TextEditingController ngoWebsite = TextEditingController();
   File logo;
   AssetImage emptyLogo = AssetImage("assets/emptyProfile.png");
+  final photos = "/ProfilePhotos/";
+  StorageReference storageReference;
+  Animation progressColor;
+  AnimationController _animationController;
+
+  @override
+  void initState() { 
+    super.initState();
+    _animationController = AnimationController(
+      vsync: this,
+      duration: Duration(seconds: 3),
+    )
+    ..addStatusListener((status) {
+      if(status == AnimationStatus.completed){
+        _animationController.reverse();
+      }else if(status == AnimationStatus.dismissed){
+          _animationController.forward();
+      }
+    });
+
+    progressColor = ColorTween(
+      begin: Colors.blue,
+      end: Colors.green
+    ).animate(_animationController);
+  }
   // Animation<Color> bgColor;
   // AnimationController bgColorController;
   var croppedImage;
@@ -99,11 +134,13 @@ class _NGO_Reg_FormState extends State<NGO_Reg_Form>{
       // maxHeight: 320.0,
       // maxWidth: 240.0
       );
+    if(img == null) return;
     var route = MaterialPageRoute(
       builder: (BuildContext context) => UserImageCrop(img: img), 
     );
-    
+    // if(img == null) return;
     croppedImage = await Navigator.of(context).push(route);
+    if(croppedImage == null) return;
     setState(() {
     logo = croppedImage;  
     });
@@ -201,6 +238,7 @@ class _NGO_Reg_FormState extends State<NGO_Reg_Form>{
               hint: "Enter your landline no.",
               controller: ngoTelephone,
               keyboardType: TextInputType.phone,
+              maxLength: 10,
               validate: (val){
                 var pattern = RegExp(r"[0-9]{10}");
                 if(!pattern.hasMatch(val.trim())){
@@ -224,11 +262,40 @@ class _NGO_Reg_FormState extends State<NGO_Reg_Form>{
                 }
               },
               ),
+              FieldControl(
+              label: "Password",
+              hint: "Enter your password",
+              hideText: true,
+              controller: ngoPass,
+              validate: (val){
+                // var pattern = RegExp(r"");
+                if(val.length < 8){
+                  return "Password has to be atleast 8 characters";
+                }else{
+                  return null;
+                }
+              },
+              ),
+
+              FieldControl(
+              label: "ReEnter Password",
+              hint: "Enter your password again",
+              hideText: true,
+              controller: ngoRePass,
+              validate: (val){
+                // var pattern = RegExp(r"");
+                if(ngoPass.text == val){
+                  return null;
+                }else{
+                  return "Passwords don't match";
+                }
+              },
+              ),
 
               FieldControl(
               label: "Website",
               hint: "Enter your official website.",
-              controller: ngoTelephone,
+              controller: ngoWebsite,
               validate: (val){
                 var pattern = RegExp(r"((http)s?:\/\/)?www.(\w+).(\w+.)*.(com|co.in|org|net)");
                 if(!pattern.hasMatch(val.trim())){
@@ -266,33 +333,167 @@ class _NGO_Reg_FormState extends State<NGO_Reg_Form>{
               // ),
 
              
+              
 
 
-
-              RaisedButton(
-                child: Text("Submit"),
-                onPressed: (){
-                  if(_formKey.currentState.validate()){
-                    Scaffold.of(context)
-                      .showSnackBar(
-                        SnackBar(
-                          content: Text("Valid Data"),
-                        )
-                      );
-                    
-                  }
-                  Navigator.push(context, MaterialPageRoute(
-                    builder: (context) => HomeNgo(),
-                  )); 
-                },
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  RaisedButton(
+                    child: Text("Submit"),
+                    onPressed: (){
+                      if(_formKey.currentState.validate()){
+                        showDialog(
+                          context: context,
+                          builder: (context) => AlertDialog(
+                            // shape: CircleBorder(
+                            //   side: BorderSide(
+                            //     width: 100.0
+                            //   )
+                            // ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                            contentPadding: EdgeInsets.all(50.0),
+                            content: Row(
+                              children: <Widget>[
+                                Text("Loading"),
+                                Spacer(),
+                                CircularProgressIndicator(
+                                  valueColor: progressColor,
+                                )
+                              ],
+                            ),
+                          ),
+                        );
+                        registerUser();
+                      }else{
+                        Scaffold.of(context)
+                          .showSnackBar(
+                            SnackBar(
+                              content: Text("Invalid Data"),
+                            )
+                          );
+                        
+                      }
+                      // uploadFile();
+                       
+                    },
+                  ),
+                ],
               )
+
 
             ],
           ),
         ),
       ); 
   }
+
+  
+
+  void registerUser() async {
+    
+    
+    
+    FirebaseUser user = await FirebaseAuth.instance.createUserWithEmailAndPassword(
+      email: ngoEmail.text.trim(),
+      password: ngoPass.text,
+    ).catchError((exp){
+        Navigator.of(context, rootNavigator : true).pop();
+        if(exp.code == "ERROR_EMAIL_ALREADY_IN_USE"){
+          showDialog(
+            context: context,
+            builder: (context) =>AlertDialog(
+              content:  Text(exp.message,),
+              contentTextStyle: TextStyle(color: Colors.black, fontSize: 20.0),
+              contentPadding: EdgeInsets.all(50.0),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(30.0),
+              ),
+              actions: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: FlatButton(
+                    color: Colors.blue,
+                    child: Text("OK", style: TextStyle(color: Colors.black)),
+                    onPressed: (){Navigator.of(context).pop(); },
+                  ),
+                )
+              ],
+            ),
+          );
+        }
+        return;
+      }
+    );
+  // user.linkWithCredential();
+ if(user != null){
+   Navigator.of(context, rootNavigator : true).pop();
+        Navigator.push(context, 
+          MaterialPageRoute(
+              builder: (context) => HomeNgo(
+              userData: NgoUserData(
+              ngoName: ngoName.text.trim(),
+              ngoRepName: ngoRepName.text.trim(),
+              ngoContact: ngoContact.text.trim(),
+              ngoTelephone: ngoTelephone.text.trim(),
+              ngoDescription: ngoDescription.text.trim(),
+              ngoEmail: ngoEmail.text.trim(),
+              ngoWebsite: ngoWebsite.text,
+              ngoLogo: logo != null ? Image.file(logo) : Image.asset("/assets/emptyProfile.png"),
+              ),
+            )
+          ),
+        
+      );
+    
+ }
+    try{
+      if(user == null) throw Exception("Null User");
+    //  final u = UserUpdateInfo();
+     
+
+    final String url = await uploadFile(user.uid);
+    Firestore.instance.collection("/NgoUsers")
+    .document(user.uid)
+      ..setData(
+         {     
+            "Name"          : ngoName.text.trim(),
+            "RepName"  : ngoRepName.text.trim(),
+            "Contact"       : ngoContact.text.trim(),
+            "Telephone"     : ngoTelephone.text.trim(),
+            "Description"   : ngoDescription.text.trim(),
+            "Email"         : ngoEmail.text.trim(),
+            "Website"       : ngoWebsite.text,
+            "LogoUrl"       : url,
+        }
+      );
+    }
+    catch(err){
+      print(err);
+      
+    }
+
+  }
+
+  Future<String> uploadFile(String uid) async{
+      if(logo == null) return "";
+       storageReference = FirebaseStorage().ref().child(photos + uid);
+      final StorageUploadTask uploadTask = storageReference.putFile(logo);
+      
+    final StreamSubscription<StorageTaskEvent> streamSubscription = uploadTask.events.listen((event) {
+        print('EVENT ${event.type}');
+    });
+
+// Cancel your subscription when done.
+    final downloadurl = await uploadTask.onComplete;
+      streamSubscription.cancel();
+    final String url = (await downloadurl.ref.getDownloadURL());
+      return url;
 }
+}
+
 
 
 class FieldControl extends StatelessWidget{

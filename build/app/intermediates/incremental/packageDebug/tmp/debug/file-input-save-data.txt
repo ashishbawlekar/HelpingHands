@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Mon Sep 30 12:46:10 IST 2019
+#Wed Oct 02 14:36:21 IST 2019
 17.baseType=DIRECTORY
 4.path=classes2.dex
 25.base=/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/transforms/mergeJniLibs/debug/0
@@ -47,7 +47,7 @@ count=27
 20.path=flutter_assets/assets/Logo.png
 16.base=/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
 8.base=/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
-15.path=flutter_assets/assets/Ngo.png
+15.path=flutter_assets/assets/Register.flr
 14.baseType=DIRECTORY
 25.set=NATIVE_RESOURCE
 17.base=/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
@@ -66,13 +66,13 @@ count=27
 3.baseType=DIRECTORY
 5.set=NATIVE_RESOURCE
 9.base=/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
-16.path=flutter_assets/assets/Register.flr
+16.path=flutter_assets/assets/Ngo.png
 18.base=/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
 5.baseType=DIRECTORY
 11.base=/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/merged_assets/debug/mergeDebugAssets/out
 8.path=flutter_assets/kernel_blob.bin
 24.set=ASSET
-17.path=flutter_assets/FontManifest.json
+17.path=flutter_assets/assets/f.png
 7.baseType=DIRECTORY
 3.base=/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/transforms/mergeJniLibs/debug/0
 10.path=classes.dex
@@ -88,7 +88,7 @@ count=27
 12.base=/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/transforms/dexMerger/debug/0
 4.set=DEX
 9.path=flutter_assets/fonts/MaterialIcons-Regular.ttf
-18.path=flutter_assets/assets/f.png
+18.path=flutter_assets/FontManifest.json
 4.base=/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/transforms/dexMerger/debug/0
 11.path=flutter_assets/LICENSE
 23.set=ASSET

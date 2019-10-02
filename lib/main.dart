@@ -2,10 +2,10 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 // import 'package:helping_hands/AnimationExampleBasic.dart';
-import 'package:helping_hands/HomeNGO.dart';
-import 'package:helping_hands/Login.dart';
-import 'package:helping_hands/Registration.dart';
-import 'package:helping_hands/Registration_NGO.dart';
+import 'package:helping_hands/Home/HomeNGO.dart';
+import 'package:helping_hands/Registration/Login.dart';
+import 'package:helping_hands/Registration/Registration.dart';
+import 'package:helping_hands/Registration/Registration_NGO.dart';
 
 class Router{
 static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -17,10 +17,6 @@ static Route<dynamic> generateRoute(RouteSettings settings) {
       case '/Registration':
         return MaterialPageRoute(builder: (_) => Registration());
       case '/Registration/NgoReg':
-        return MaterialPageRoute(builder: (_) => NgoReg());
-      case '/Registration/NgoReg/HomeNGO':
-        return MaterialPageRoute(builder: (_) => HomeNgo());
-      case '/NgoReg':
         return MaterialPageRoute(builder: (_) => NgoReg());
       case '/Registration/NgoReg/HomeNGO':
         return MaterialPageRoute(builder: (_) => HomeNgo());
@@ -79,52 +75,76 @@ voteDown() {
  
   }
 
+  Future<bool> _onWillPop(){
+  print("In Will pop scope!");
+    return showDialog(
+      barrierDismissible: false,
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('Are you sure?'),
+        content: Text('You will lose all the data!'),
+        actions: <Widget>[
+          FlatButton(
+            onPressed: () => Navigator.of(context).pop(false),
+            child: Text('No'),
+          ),
+          FlatButton(
+            onPressed: () => Navigator.of(context).pop(true),
+            child: new Text('Yes'),
+          ),
+        ],
+      ),
+    ) ?? false;
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-        title: Text("Voting App", 
-        style: TextStyle(
-          fontSize: 20.0,
-          color: Colors.black
-        ),),
-        backgroundColor: Colors.grey,
-        leading: const Icon(Icons.home),
-        ),
-        body: Center(
-                  child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            // crossAxisAlignment: CrossAxisAlignment.end,
-            children: <Widget>[
-              Text("Votes : $count"),
-              RaisedButton(
-                child: Text("Vote up!"),
-                onPressed: voteUp,
-                padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 12.0),
-                color: Colors.lightGreen,
-                // colorBrightness: Brightness.light,
-                elevation: 20.0,
-                splashColor: Colors.green,
-              ),
-              RaisedButton(
-                              child: Text("Login"),
-                              onPressed: (){
-                              //  Navigator.push(
-                              //  context,
-                              //  MaterialPageRoute(builder: (context) => GetTextApp()),
-                              // );
-                              Navigator.pushNamed(context, '/Login');
-                          },
-                              padding: const EdgeInsets.all(10.0),
-                              color: Color.fromARGB(100, 250, 0, 0),
-                              // colorBrightness: Brightness.light,
-                              splashColor: Color.fromARGB(255, 250, 0, 0),
-                            ),
-                          ],
+    return WillPopScope(
+        onWillPop: () => _onWillPop(),
+          child: Scaffold(
+          appBar: AppBar(
+          title: Text("Voting App", 
+          style: TextStyle(
+            fontSize: 20.0,
+            color: Colors.black
+          ),),
+          backgroundColor: Colors.grey,
+          leading: const Icon(Icons.home),
+          ),
+          body: Center(
+                    child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              // crossAxisAlignment: CrossAxisAlignment.end,
+              children: <Widget>[
+                Text("Votes : $count"),
+                RaisedButton(
+                  child: Text("Vote up!"),
+                  onPressed: voteUp,
+                  padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 12.0),
+                  color: Colors.lightGreen,
+                  // colorBrightness: Brightness.light,
+                  elevation: 20.0,
+                  splashColor: Colors.green,
+                ),
+                RaisedButton(
+                                child: Text("Login"),
+                                onPressed: (){
+                                //  Navigator.push(
+                                //  context,
+                                //  MaterialPageRoute(builder: (context) => GetTextApp()),
+                                // );
+                                Navigator.pushNamed(context, '/Login');
+                            },
+                                padding: const EdgeInsets.all(10.0),
+                                color: Color.fromARGB(100, 250, 0, 0),
+                                // colorBrightness: Brightness.light,
+                                splashColor: Color.fromARGB(255, 250, 0, 0),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                    );
+    );
                     
                 }
                 

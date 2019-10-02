@@ -406,6 +406,7 @@ public final class R {
     public static final int notification_template_icon_low_bg=0x7f04001f;
     public static final int notification_tile_bg=0x7f040020;
     public static final int notify_panel_notification_icon_bg=0x7f040021;
+    public static final int toast_bg=0x7f040022;
   }
   public static final class id {
     public static final int action0=0x7f050000;
@@ -487,6 +488,7 @@ public final class R {
     public static final int notification_template_media_custom=0x7f07000c;
     public static final int notification_template_part_chronometer=0x7f07000d;
     public static final int notification_template_part_time=0x7f07000e;
+    public static final int toast_custom=0x7f07000f;
   }
   public static final class mipmap {
     public static final int ic_launcher=0x7f080000;

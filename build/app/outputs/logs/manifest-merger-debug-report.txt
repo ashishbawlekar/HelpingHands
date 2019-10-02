@@ -6,30 +6,35 @@ INJECTED from /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands
 INJECTED from /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/android/app/src/main/AndroidManifest.xml:1:1-33:12
 MERGED from /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/android/app/src/main/AndroidManifest.xml:1:1-33:12
 MERGED from [androidx.multidex:multidex:2.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/multidex-2.0.0.aar/a5de42a210f437643e465e525c2a2849/AndroidManifest.xml:17:1-22:12
+MERGED from [:google_sign_in] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:fluttertoast] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/fluttertoast/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:firebase_storage] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-19:12
-MERGED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
 MERGED from [:shared_preferences] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:image_picker] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-22:12
-MERGED from [:image_crop] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_crop/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-10:12
-MERGED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
 MERGED from [:firebase_core] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
-MERGED from [:firebase_storage] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [:image_crop] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_crop/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-10:12
+MERGED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-15:12
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/e9e1eea513a526d9cdc60712f7186abe/AndroidManifest.xml:17:1-39:12
+MERGED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:2:1-24:12
+MERGED from [io.grpc:grpc-android:1.16.1] /home/riki/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/e707cf7dcca195d1694e17904fd4cdfc/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:15:1-37:12
+MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/585fce412c266ae81133ff31740d011f/AndroidManifest.xml:17:1-42:12
+MERGED from [com.google.firebase:firebase-auth-interop:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-interop-17.0.0.aar/f27fd3e697dc8c8025a2afbbbda0b077/AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-core:16.0.9] /home/riki/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.9.aar/5008a42b72981f3b21233e8cf9013686/AndroidManifest.xml:2:1-9:12
 MERGED from [com.google.firebase:firebase-analytics:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.5.0.aar/9c0f7a8c988c7df3e044b75f0731efe8/AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/585fce412c266ae81133ff31740d011f/AndroidManifest.xml:17:1-42:12
-MERGED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:2:1-24:12
-MERGED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:15:1-37:12
 MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-api-16.5.0.aar/1a127c163ae26c8d9c849ad43fa7cdf8/AndroidManifest.xml:17:1-36:12
-MERGED from [com.google.firebase:firebase-auth-interop:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-interop-17.0.0.aar/f27fd3e697dc8c8025a2afbbbda0b077/AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.firebase:firebase-iid:17.1.2] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-iid-17.1.2.aar/97acd962a62478127fe82a52c7a7fa60/AndroidManifest.xml:17:1-59:12
 MERGED from [com.google.firebase:firebase-common:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-17.0.0.aar/392e214fd96077114643d7776a3d6fb3/AndroidManifest.xml:2:1-19:12
-MERGED from [io.grpc:grpc-android:1.16.1] /home/riki/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/e707cf7dcca195d1694e17904fd4cdfc/AndroidManifest.xml:2:1-13:12
-MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-16.5.0.aar/b53602f6ab6cae924c5b8a846df9554d/AndroidManifest.xml:17:1-55:12
-MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-sdk-16.5.0.aar/411b9f28d58ff0771bf109adbea74d69/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-api-phone-16.0.0.aar/c06c9713f02ce037219d953ef5f11e35/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-base-16.0.0.aar/5fc65349f684ec50c73826f96a73800b/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/87b919c44309978388ac9b00431a1ba5/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-iid-interop-16.0.1.aar/94e7e418bee57850b893f1fe4d838d94/AndroidManifest.xml:2:1-10:12
 MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/0e452e872baa71ade25dac9e2a225913/AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/f86ba105b8c67246e5ac1d30158dfe97/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-16.5.0.aar/b53602f6ab6cae924c5b8a846df9554d/AndroidManifest.xml:17:1-55:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-sdk-16.5.0.aar/411b9f28d58ff0771bf109adbea74d69/AndroidManifest.xml:17:1-25:12
 MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-impl-16.5.0.aar/86dc16459dae04fbcdf018eb07ac7541/AndroidManifest.xml:17:1-40:12
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-sdk-api-16.5.0.aar/1cee51e5401e1c982e09b2920c9fe886/AndroidManifest.xml:17:1-40:12
 MERGED from [com.google.android.gms:play-services-measurement-base:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-base-16.5.0.aar/918900b8ef5d05ed27ddbb030330a3d8/AndroidManifest.xml:2:1-9:12
@@ -84,46 +89,48 @@ INJECTED from /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands
 		ADDED from /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/android/app/src/main/AndroidManifest.xml:1:11-69
 application
 ADDED from /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/android/app/src/main/AndroidManifest.xml:9:5-32:19
-MERGED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-17:19
-MERGED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-17:19
-MERGED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
-MERGED from [:image_picker] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-20:19
-MERGED from [:image_picker] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-20:19
-MERGED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
-MERGED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_core] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
-MERGED from [:firebase_core] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_storage] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
 MERGED from [:firebase_storage] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
-MERGED from [com.google.firebase:firebase-core:16.0.9] /home/riki/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.9.aar/5008a42b72981f3b21233e8cf9013686/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-core:16.0.9] /home/riki/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.9.aar/5008a42b72981f3b21233e8cf9013686/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-analytics:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.5.0.aar/9c0f7a8c988c7df3e044b75f0731efe8/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-analytics:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.5.0.aar/9c0f7a8c988c7df3e044b75f0731efe8/AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/585fce412c266ae81133ff31740d011f/AndroidManifest.xml:23:5-40:19
-MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/585fce412c266ae81133ff31740d011f/AndroidManifest.xml:23:5-40:19
+MERGED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-17:19
+MERGED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-17:19
+MERGED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:image_picker] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-20:19
+MERGED from [:image_picker] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-20:19
+MERGED from [:firebase_core] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_core] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-13:19
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/e9e1eea513a526d9cdc60712f7186abe/AndroidManifest.xml:22:5-37:19
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/e9e1eea513a526d9cdc60712f7186abe/AndroidManifest.xml:22:5-37:19
 MERGED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:16:5-22:19
 MERGED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:16:5-22:19
 MERGED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:29:5-35:19
 MERGED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:29:5-35:19
-MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-api-16.5.0.aar/1a127c163ae26c8d9c849ad43fa7cdf8/AndroidManifest.xml:26:5-34:19
-MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-api-16.5.0.aar/1a127c163ae26c8d9c849ad43fa7cdf8/AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/585fce412c266ae81133ff31740d011f/AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/585fce412c266ae81133ff31740d011f/AndroidManifest.xml:23:5-40:19
 MERGED from [com.google.firebase:firebase-auth-interop:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-interop-17.0.0.aar/f27fd3e697dc8c8025a2afbbbda0b077/AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-auth-interop:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-interop-17.0.0.aar/f27fd3e697dc8c8025a2afbbbda0b077/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-core:16.0.9] /home/riki/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.9.aar/5008a42b72981f3b21233e8cf9013686/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-core:16.0.9] /home/riki/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.9.aar/5008a42b72981f3b21233e8cf9013686/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.5.0.aar/9c0f7a8c988c7df3e044b75f0731efe8/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.5.0.aar/9c0f7a8c988c7df3e044b75f0731efe8/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-api-16.5.0.aar/1a127c163ae26c8d9c849ad43fa7cdf8/AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-api-16.5.0.aar/1a127c163ae26c8d9c849ad43fa7cdf8/AndroidManifest.xml:26:5-34:19
 MERGED from [com.google.firebase:firebase-iid:17.1.2] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-iid-17.1.2.aar/97acd962a62478127fe82a52c7a7fa60/AndroidManifest.xml:28:5-57:19
 MERGED from [com.google.firebase:firebase-iid:17.1.2] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-iid-17.1.2.aar/97acd962a62478127fe82a52c7a7fa60/AndroidManifest.xml:28:5-57:19
 MERGED from [com.google.firebase:firebase-common:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-17.0.0.aar/392e214fd96077114643d7776a3d6fb3/AndroidManifest.xml:11:5-17:19
 MERGED from [com.google.firebase:firebase-common:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-17.0.0.aar/392e214fd96077114643d7776a3d6fb3/AndroidManifest.xml:11:5-17:19
-MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-16.5.0.aar/b53602f6ab6cae924c5b8a846df9554d/AndroidManifest.xml:28:5-53:19
-MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-16.5.0.aar/b53602f6ab6cae924c5b8a846df9554d/AndroidManifest.xml:28:5-53:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-sdk-16.5.0.aar/411b9f28d58ff0771bf109adbea74d69/AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-sdk-16.5.0.aar/411b9f28d58ff0771bf109adbea74d69/AndroidManifest.xml:22:5-23:19
 MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-iid-interop-16.0.1.aar/94e7e418bee57850b893f1fe4d838d94/AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-iid-interop-16.0.1.aar/94e7e418bee57850b893f1fe4d838d94/AndroidManifest.xml:7:5-8:19
 MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/0e452e872baa71ade25dac9e2a225913/AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/0e452e872baa71ade25dac9e2a225913/AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/f86ba105b8c67246e5ac1d30158dfe97/AndroidManifest.xml:7:5-20
 MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/f86ba105b8c67246e5ac1d30158dfe97/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-16.5.0.aar/b53602f6ab6cae924c5b8a846df9554d/AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-16.5.0.aar/b53602f6ab6cae924c5b8a846df9554d/AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-sdk-16.5.0.aar/411b9f28d58ff0771bf109adbea74d69/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-sdk-16.5.0.aar/411b9f28d58ff0771bf109adbea74d69/AndroidManifest.xml:22:5-23:19
 MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-impl-16.5.0.aar/86dc16459dae04fbcdf018eb07ac7541/AndroidManifest.xml:28:5-38:19
 MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-impl-16.5.0.aar/86dc16459dae04fbcdf018eb07ac7541/AndroidManifest.xml:28:5-38:19
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-sdk-api-16.5.0.aar/1cee51e5401e1c982e09b2920c9fe886/AndroidManifest.xml:28:5-38:19
@@ -186,46 +193,52 @@ INJECTED from /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands
 INJECTED from /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/android/app/src/main/AndroidManifest.xml
 MERGED from [androidx.multidex:multidex:2.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/multidex-2.0.0.aar/a5de42a210f437643e465e525c2a2849/AndroidManifest.xml:20:5-43
 MERGED from [androidx.multidex:multidex:2.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/multidex-2.0.0.aar/a5de42a210f437643e465e525c2a2849/AndroidManifest.xml:20:5-43
+MERGED from [:google_sign_in] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:google_sign_in] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/fluttertoast/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:fluttertoast] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/fluttertoast/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_storage] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_storage] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:shared_preferences] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:shared_preferences] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:image_picker] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:image_picker] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:image_crop] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_crop/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:image_crop] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_crop/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:firebase_core] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_storage] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:firebase_storage] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:image_crop] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_crop/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:image_crop] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_crop/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/e9e1eea513a526d9cdc60712f7186abe/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/e9e1eea513a526d9cdc60712f7186abe/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.16.1] /home/riki/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/e707cf7dcca195d1694e17904fd4cdfc/AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.16.1] /home/riki/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/e707cf7dcca195d1694e17904fd4cdfc/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/585fce412c266ae81133ff31740d011f/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/585fce412c266ae81133ff31740d011f/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-interop-17.0.0.aar/f27fd3e697dc8c8025a2afbbbda0b077/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-interop-17.0.0.aar/f27fd3e697dc8c8025a2afbbbda0b077/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-core:16.0.9] /home/riki/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.9.aar/5008a42b72981f3b21233e8cf9013686/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-core:16.0.9] /home/riki/.gradle/caches/transforms-1/files-1.1/firebase-core-16.0.9.aar/5008a42b72981f3b21233e8cf9013686/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.5.0.aar/9c0f7a8c988c7df3e044b75f0731efe8/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-analytics:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/firebase-analytics-16.5.0.aar/9c0f7a8c988c7df3e044b75f0731efe8/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/585fce412c266ae81133ff31740d011f/AndroidManifest.xml:21:5-44
-MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/585fce412c266ae81133ff31740d011f/AndroidManifest.xml:21:5-44
-MERGED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-api-16.5.0.aar/1a127c163ae26c8d9c849ad43fa7cdf8/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-api-16.5.0.aar/1a127c163ae26c8d9c849ad43fa7cdf8/AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-auth-interop:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-interop-17.0.0.aar/f27fd3e697dc8c8025a2afbbbda0b077/AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-auth-interop:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-interop-17.0.0.aar/f27fd3e697dc8c8025a2afbbbda0b077/AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-iid:17.1.2] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-iid-17.1.2.aar/97acd962a62478127fe82a52c7a7fa60/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-iid:17.1.2] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-iid-17.1.2.aar/97acd962a62478127fe82a52c7a7fa60/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-common:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-17.0.0.aar/392e214fd96077114643d7776a3d6fb3/AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-common:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-17.0.0.aar/392e214fd96077114643d7776a3d6fb3/AndroidManifest.xml:6:5-8:41
-MERGED from [io.grpc:grpc-android:1.16.1] /home/riki/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/e707cf7dcca195d1694e17904fd4cdfc/AndroidManifest.xml:7:5-9:41
-MERGED from [io.grpc:grpc-android:1.16.1] /home/riki/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/e707cf7dcca195d1694e17904fd4cdfc/AndroidManifest.xml:7:5-9:41
-MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-16.5.0.aar/b53602f6ab6cae924c5b8a846df9554d/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-16.5.0.aar/b53602f6ab6cae924c5b8a846df9554d/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-sdk-16.5.0.aar/411b9f28d58ff0771bf109adbea74d69/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-sdk-16.5.0.aar/411b9f28d58ff0771bf109adbea74d69/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-api-phone-16.0.0.aar/c06c9713f02ce037219d953ef5f11e35/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:16.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-api-phone-16.0.0.aar/c06c9713f02ce037219d953ef5f11e35/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-base-16.0.0.aar/5fc65349f684ec50c73826f96a73800b/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:16.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-base-16.0.0.aar/5fc65349f684ec50c73826f96a73800b/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/87b919c44309978388ac9b00431a1ba5/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-flags:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/play-services-flags-16.0.1.aar/87b919c44309978388ac9b00431a1ba5/AndroidManifest.xml:20:5-44
 MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-iid-interop-16.0.1.aar/94e7e418bee57850b893f1fe4d838d94/AndroidManifest.xml:5:5-44
@@ -234,6 +247,10 @@ MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/riki/.gradl
 MERGED from [com.google.android.gms:play-services-base:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/0e452e872baa71ade25dac9e2a225913/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/f86ba105b8c67246e5ac1d30158dfe97/AndroidManifest.xml:5:5-44
 MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-tasks-16.0.1.aar/f86ba105b8c67246e5ac1d30158dfe97/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-16.5.0.aar/b53602f6ab6cae924c5b8a846df9554d/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-16.5.0.aar/b53602f6ab6cae924c5b8a846df9554d/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-sdk-16.5.0.aar/411b9f28d58ff0771bf109adbea74d69/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-sdk-16.5.0.aar/411b9f28d58ff0771bf109adbea74d69/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-impl-16.5.0.aar/86dc16459dae04fbcdf018eb07ac7541/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-impl-16.5.0.aar/86dc16459dae04fbcdf018eb07ac7541/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-sdk-api-16.5.0.aar/1cee51e5401e1c982e09b2920c9fe886/AndroidManifest.xml:20:5-44
@@ -314,6 +331,8 @@ INJECTED from /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands
 		INJECTED from /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/android/app/src/debug/AndroidManifest.xml
 uses-permission#android.permission.INTERNET
 ADDED from /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/android/app/src/debug/AndroidManifest.xml:6:5-66
+MERGED from [:google_sign_in] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-67
+MERGED from [:google_sign_in] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/google_sign_in/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-67
 MERGED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-67
 MERGED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-67
 MERGED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:14:5-67
@@ -332,18 +351,48 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /h
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-sdk-api-16.5.0.aar/1cee51e5401e1c982e09b2920c9fe886/AndroidManifest.xml:23:5-67
 	android:name
 		ADDED from /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/android/app/src/debug/AndroidManifest.xml:6:22-64
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [:firebase_storage] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-16:19
+MERGED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-16:19
+MERGED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_core] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
+MERGED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:17:9-21:19
+MERGED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:17:9-21:19
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:30:9-34:19
+MERGED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:30:9-34:19
+MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/585fce412c266ae81133ff31740d011f/AndroidManifest.xml:33:9-39:19
+MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/585fce412c266ae81133ff31740d011f/AndroidManifest.xml:33:9-39:19
+MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-api-16.5.0.aar/1a127c163ae26c8d9c849ad43fa7cdf8/AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-api-16.5.0.aar/1a127c163ae26c8d9c849ad43fa7cdf8/AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.firebase:firebase-iid:17.1.2] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-iid-17.1.2.aar/97acd962a62478127fe82a52c7a7fa60/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-iid:17.1.2] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-iid-17.1.2.aar/97acd962a62478127fe82a52c7a7fa60/AndroidManifest.xml:29:9-35:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/585fce412c266ae81133ff31740d011f/AndroidManifest.xml:35:13-37
+	android:name
+		ADDED from [:firebase_storage] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:18-89
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_storage] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+	android:value
+		ADDED from [:firebase_storage] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+	android:name
+		ADDED from [:firebase_storage] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-126
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-79
 MERGED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:13:5-79
 MERGED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:13:5-79
+MERGED from [io.grpc:grpc-android:1.16.1] /home/riki/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/e707cf7dcca195d1694e17904fd4cdfc/AndroidManifest.xml:11:5-79
+MERGED from [io.grpc:grpc-android:1.16.1] /home/riki/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/e707cf7dcca195d1694e17904fd4cdfc/AndroidManifest.xml:11:5-79
 MERGED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:26:5-79
 MERGED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:26:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-api-16.5.0.aar/1a127c163ae26c8d9c849ad43fa7cdf8/AndroidManifest.xml:23:5-79
 MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-api-16.5.0.aar/1a127c163ae26c8d9c849ad43fa7cdf8/AndroidManifest.xml:23:5-79
 MERGED from [com.google.firebase:firebase-iid:17.1.2] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-iid-17.1.2.aar/97acd962a62478127fe82a52c7a7fa60/AndroidManifest.xml:22:5-79
 MERGED from [com.google.firebase:firebase-iid:17.1.2] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-iid-17.1.2.aar/97acd962a62478127fe82a52c7a7fa60/AndroidManifest.xml:22:5-79
-MERGED from [io.grpc:grpc-android:1.16.1] /home/riki/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/e707cf7dcca195d1694e17904fd4cdfc/AndroidManifest.xml:11:5-79
-MERGED from [io.grpc:grpc-android:1.16.1] /home/riki/.gradle/caches/transforms-1/files-1.1/grpc-android-1.16.1.aar/e707cf7dcca195d1694e17904fd4cdfc/AndroidManifest.xml:11:5-79
 MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-16.5.0.aar/b53602f6ab6cae924c5b8a846df9554d/AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-16.5.0.aar/b53602f6ab6cae924c5b8a846df9554d/AndroidManifest.xml:24:5-79
 MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-impl-16.5.0.aar/86dc16459dae04fbcdf018eb07ac7541/AndroidManifest.xml:24:5-79
@@ -366,42 +415,18 @@ MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /h
 MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-sdk-api-16.5.0.aar/1cee51e5401e1c982e09b2920c9fe886/AndroidManifest.xml:25:5-68
 	android:name
 		ADDED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:9:22-65
-service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:12:9-16:19
-MERGED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_core] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_core] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_storage] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [:firebase_storage] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:8:9-12:19
-MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/585fce412c266ae81133ff31740d011f/AndroidManifest.xml:33:9-39:19
-MERGED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/585fce412c266ae81133ff31740d011f/AndroidManifest.xml:33:9-39:19
-MERGED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:17:9-21:19
-MERGED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:17:9-21:19
-MERGED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:30:9-34:19
-MERGED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:30:9-34:19
-MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-api-16.5.0.aar/1a127c163ae26c8d9c849ad43fa7cdf8/AndroidManifest.xml:27:9-33:19
-MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-api-16.5.0.aar/1a127c163ae26c8d9c849ad43fa7cdf8/AndroidManifest.xml:27:9-33:19
-MERGED from [com.google.firebase:firebase-iid:17.1.2] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-iid-17.1.2.aar/97acd962a62478127fe82a52c7a7fa60/AndroidManifest.xml:29:9-35:19
-MERGED from [com.google.firebase:firebase-iid:17.1.2] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-iid-17.1.2.aar/97acd962a62478127fe82a52c7a7fa60/AndroidManifest.xml:29:9-35:19
-	android:exported
-		ADDED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/585fce412c266ae81133ff31740d011f/AndroidManifest.xml:35:13-37
-	android:name
-		ADDED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:12:18-89
 meta-data#com.google.firebase.components:io.flutter.plugins.firebaseanalytics.FlutterFirebaseAppRegistrar
 ADDED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:13:13-15:85
 	android:value
 		ADDED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:15:17-82
 	android:name
 		ADDED from [:firebase_analytics] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_analytics/intermediates/library_manifest/debug/AndroidManifest.xml:14:17-127
-meta-data#com.google.firebase.components:io.flutter.plugins.firebaseauth.FlutterFirebaseAppRegistrar
-ADDED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.cloudfirestore.FlutterFirebaseAppRegistrar
+ADDED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
 	android:value
-		ADDED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+		ADDED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-122
+		ADDED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-133
 uses-permission#android.permission.READ_EXTERNAL_STORAGE
 ADDED from [:image_picker] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
 MERGED from [:image_crop] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_crop/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-80
@@ -430,24 +455,48 @@ ADDED from [:image_picker] /home/riki/Desktop/Study Material/Self-Study/Flutter/
 		ADDED from [:image_picker] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:18:17-72
 	android:name
 		ADDED from [:image_picker] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:17:17-67
-meta-data#com.google.firebase.components:io.flutter.plugins.firebase.cloudfirestore.FlutterFirebaseAppRegistrar
-ADDED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
-	android:value
-		ADDED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
-	android:name
-		ADDED from [:cloud_firestore] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/cloud_firestore/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-133
 meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseAppRegistrar
 ADDED from [:firebase_core] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
 	android:value
 		ADDED from [:firebase_core] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 	android:name
 		ADDED from [:firebase_core] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_core/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-123
-meta-data#com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar
-ADDED from [:firebase_storage] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
+meta-data#com.google.firebase.components:io.flutter.plugins.firebaseauth.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:9:13-11:85
 	android:value
-		ADDED from [:firebase_storage] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
+		ADDED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:11:17-82
 	android:name
-		ADDED from [:firebase_storage] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_storage/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-126
+		ADDED from [:firebase_auth] /home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/firebase_auth/intermediates/library_manifest/debug/AndroidManifest.xml:10:17-122
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/e9e1eea513a526d9cdc60712f7186abe/AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/e9e1eea513a526d9cdc60712f7186abe/AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/e9e1eea513a526d9cdc60712f7186abe/AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/e9e1eea513a526d9cdc60712f7186abe/AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/e9e1eea513a526d9cdc60712f7186abe/AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/e9e1eea513a526d9cdc60712f7186abe/AndroidManifest.xml:33:9-36:110
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/e9e1eea513a526d9cdc60712f7186abe/AndroidManifest.xml:35:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/e9e1eea513a526d9cdc60712f7186abe/AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/e9e1eea513a526d9cdc60712f7186abe/AndroidManifest.xml:34:13-89
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:18:13-20:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:20:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:19:17-111
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:31:13-33:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:33:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:32:17-107
 activity#com.google.firebase.auth.internal.FederatedSignInActivity
 ADDED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/585fce412c266ae81133ff31740d011f/AndroidManifest.xml:24:9-31:50
 	android:excludeFromRecents
@@ -470,18 +519,6 @@ ADDED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/
 		ADDED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/585fce412c266ae81133ff31740d011f/AndroidManifest.xml:38:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-auth:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-auth-17.0.0.aar/585fce412c266ae81133ff31740d011f/AndroidManifest.xml:37:17-109
-meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
-ADDED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:18:13-20:85
-	android:value
-		ADDED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:20:17-82
-	android:name
-		ADDED from [com.google.firebase:firebase-firestore:19.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-firestore-19.0.0.aar/cabb3281cb898b8d528ac2b3472b0d05/AndroidManifest.xml:19:17-111
-meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
-ADDED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:31:13-33:85
-	android:value
-		ADDED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:33:17-82
-	android:name
-		ADDED from [com.google.firebase:firebase-storage:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/11c6f971283276366443d2794bcb1fac/AndroidManifest.xml:32:17-107
 meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
 ADDED from [com.google.android.gms:play-services-measurement-api:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-api-16.5.0.aar/1a127c163ae26c8d9c849ad43fa7cdf8/AndroidManifest.xml:30:13-32:85
 	android:value
@@ -536,6 +573,14 @@ ADDED from [com.google.firebase:firebase-common:17.0.0] /home/riki/.gradle/cache
 		ADDED from [com.google.firebase:firebase-common:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-17.0.0.aar/392e214fd96077114643d7776a3d6fb3/AndroidManifest.xml:16:13-36
 	android:name
 		ADDED from [com.google.firebase:firebase-common:17.0.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-17.0.0.aar/392e214fd96077114643d7776a3d6fb3/AndroidManifest.xml:13:13-77
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/0e452e872baa71ade25dac9e2a225913/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/0e452e872baa71ade25dac9e2a225913/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/0e452e872baa71ade25dac9e2a225913/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/0e452e872baa71ade25dac9e2a225913/AndroidManifest.xml:24:13-79
 uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
 ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-16.5.0.aar/b53602f6ab6cae924c5b8a846df9554d/AndroidManifest.xml:26:5-110
 MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-impl-16.5.0.aar/86dc16459dae04fbcdf018eb07ac7541/AndroidManifest.xml:26:5-110
@@ -590,14 +635,6 @@ ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /home/riki/
 		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-16.5.0.aar/b53602f6ab6cae924c5b8a846df9554d/AndroidManifest.xml:52:13-69
 	android:name
 		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-measurement-16.5.0.aar/b53602f6ab6cae924c5b8a846df9554d/AndroidManifest.xml:49:13-87
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/0e452e872baa71ade25dac9e2a225913/AndroidManifest.xml:23:9-26:75
-	android:exported
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/0e452e872baa71ade25dac9e2a225913/AndroidManifest.xml:25:13-37
-	android:theme
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/0e452e872baa71ade25dac9e2a225913/AndroidManifest.xml:26:13-72
-	android:name
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/0e452e872baa71ade25dac9e2a225913/AndroidManifest.xml:24:13-79
 meta-data#com.google.android.gms.version
 ADDED from [com.google.android.gms:play-services-basement:16.2.0] /home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.2.0.aar/9d8649d45886f7916bdf108d5dcc1d37/AndroidManifest.xml:23:9-25:69
 	android:value

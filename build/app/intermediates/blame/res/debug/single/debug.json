@@ -212,12 +212,24 @@
         "source": "/home/riki/.gradle/caches/transforms-1/files-1.1/core-1.0.2.aar/edfc8ac9991e4bcb6fa23f7651f3e8c8/res/drawable-mdpi-v4/notification_bg_normal.9.png"
     },
     {
+        "merged": "/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/res/merged/debug/drawable_toast_bg.xml.flat",
+        "source": "/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/fluttertoast/intermediates/packaged_res/debug/drawable/toast_bg.xml"
+    },
+    {
+        "merged": "/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/res/merged/debug/drawable-watch-v20_common_google_signin_btn_text_light_normal.xml.flat",
+        "source": "/home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/e9e1eea513a526d9cdc60712f7186abe/res/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml"
+    },
+    {
         "merged": "/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
         "source": "/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
     {
         "merged": "/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "/home/riki/.gradle/caches/transforms-1/files-1.1/core-1.0.2.aar/edfc8ac9991e4bcb6fa23f7651f3e8c8/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/res/merged/debug/drawable-watch-v20_common_google_signin_btn_text_dark_normal.xml.flat",
+        "source": "/home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/e9e1eea513a526d9cdc60712f7186abe/res/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml"
     },
     {
         "merged": "/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
@@ -312,6 +324,10 @@
         "source": "/home/riki/.gradle/caches/transforms-1/files-1.1/core-1.0.2.aar/edfc8ac9991e4bcb6fa23f7651f3e8c8/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
+        "merged": "/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/res/merged/debug/drawable-watch-v20_common_google_signin_btn_text_disabled.xml.flat",
+        "source": "/home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/e9e1eea513a526d9cdc60712f7186abe/res/drawable-watch-v20/common_google_signin_btn_text_disabled.xml"
+    },
+    {
         "merged": "/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/res/merged/debug/color_common_google_signin_btn_text_light.xml.flat",
         "source": "/home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/0e452e872baa71ade25dac9e2a225913/res/color/common_google_signin_btn_text_light.xml"
     },
@@ -338,6 +354,10 @@
     {
         "merged": "/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/res/merged/debug/drawable_common_google_signin_btn_text_disabled.xml.flat",
         "source": "/home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-base-16.0.1.aar/0e452e872baa71ade25dac9e2a225913/res/drawable/common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/res/merged/debug/layout_toast_custom.xml.flat",
+        "source": "/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/fluttertoast/intermediates/packaged_res/debug/layout/toast_custom.xml"
     },
     {
         "merged": "/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/res/merged/debug/layout_notification_template_icon_group.xml.flat",

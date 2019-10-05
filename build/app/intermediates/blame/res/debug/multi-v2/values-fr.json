@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml",
+            "outputFile": "/home/riki/Desktop/Study Material/Self-Study/Flutter/another/HelpingHands/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-fr/values-fr.xml",
             "map": [
                 {
                     "source": "/home/riki/.gradle/caches/transforms-1/files-1.1/core-1.0.2.aar/edfc8ac9991e4bcb6fa23f7651f3e8c8/res/values-fr/values-fr.xml",

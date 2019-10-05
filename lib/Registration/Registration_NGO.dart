@@ -7,10 +7,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart' as prefix0;
+// import 'package:flutter/material.dart' as prefix0;
 import 'package:flutter/services.dart';
 import 'package:helping_hands/Registration/Authentication.dart';
 import 'package:helping_hands/Home/HomeNGO.dart';
+import 'package:helping_hands/Utils/Cities.dart';
 import 'package:helping_hands/Utils/UserData.dart';
 import 'package:helping_hands/Registration/Verification.dart';
 // import 'package:image_crop/image_crop.dart';
@@ -68,6 +69,7 @@ class _NgoRegState extends State<NgoReg> {
         context: context,
         builder: (context) => _backButtonConfirmation(),
       );
+    return true;
     });
   }
 
@@ -127,6 +129,8 @@ class _NGO_Reg_FormState extends State<NGO_Reg_Form> with SingleTickerProviderSt
   TextEditingController ngoRePass = TextEditingController();
   TextEditingController ngoWebsite = TextEditingController();
   TextEditingController ngoAddress = TextEditingController();
+  TextEditingController ngoZipCode = TextEditingController();
+  String city;
   File logo;
   AssetImage emptyLogo = AssetImage("assets/emptyProfile.png");
   final photos = "/ProfilePhotos/";
@@ -360,6 +364,67 @@ class _NGO_Reg_FormState extends State<NGO_Reg_Form> with SingleTickerProviderSt
                     return null;
                   }
                 },
+                ),
+
+                
+
+                Container(
+                  // width: 300.0,
+                  // color: Colors.black,
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(
+                         child:Padding(
+                            padding: EdgeInsets.only(top: 5.0, bottom: 5.0, left: 20.0, right: 3.0),
+                            child: DropdownButton(
+                              value: city,
+                              onChanged: (val){
+                                city=val;
+                                setState(() {
+                                  
+                                });
+                              },
+                              elevation: 10,
+                              hint: Text("City"),
+                              items: Cities.cityList.map(
+                                (city){
+                                  return DropdownMenuItem(
+                                    value: city,
+                                    child: Text(city),
+                                  );
+                                }
+                              ).toList(),
+                            ),
+                        ),
+                         
+                      ),
+
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.40,
+                    child: FieldControl(
+                      
+                      hpad: 10.0,
+                      label: "Zipcode",
+                      hint: "Enter your Zip Code",
+                      controller: ngoZipCode,
+                      keyboardType: TextInputType.number,
+                      maxLength: 6,
+                      
+                      validate: (val){
+                          final pattern = RegExp(r"[0-9]{6}");
+                          if(pattern.hasMatch(val)){
+                            return null;
+                          }else{
+                            return 'Please enter valid Zip Code';
+                          }
+                      },
+                  ),
+                    )
+                    ,
+                    
+
+                    ],
+                  ),
                 ),
 
                 FieldControl(
@@ -597,6 +662,8 @@ class _NGO_Reg_FormState extends State<NGO_Reg_Form> with SingleTickerProviderSt
             "Website"       : ngoWebsite.text,
             "LogoUrl"       : url,
             "Address"       : ngoAddress.text,
+            "City"          : city,
+            "ZipCode"       : ngoZipCode.text,
         }
       );
   }
@@ -633,6 +700,8 @@ class FieldControl extends StatelessWidget{
     this.maxlines = 1,
     this.maxLength,
     this.expand = false,
+    this.icon,
+    this.hpad = 30.0,
   });
  @required var label;
  var autofocus;
@@ -644,13 +713,15 @@ class FieldControl extends StatelessWidget{
   var maxlines;
   var maxLength;
   bool expand;
+  var icon;
+  var hpad;
 
   
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: EdgeInsets.symmetric(horizontal: 30.0, vertical: 5.0),
+        padding: EdgeInsets.symmetric(horizontal: hpad, vertical: 5.0),
         decoration: BoxDecoration(
         border: Border(
           // right: BorderSide(color: Colors.red),
@@ -669,6 +740,7 @@ class FieldControl extends StatelessWidget{
               autofocus: this.autofocus,
               controller: this.controller,
             decoration: InputDecoration(
+            icon: this.icon,
             hintText: this.hint,
             hintStyle: TextStyle(fontWeight: FontWeight.w600),
             focusColor: Colors.black,

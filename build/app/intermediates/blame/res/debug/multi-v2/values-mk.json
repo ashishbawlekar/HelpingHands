@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-mk/values-mk.xml",
+            "outputFile": "/home/riki/Desktop/Study Material/Self-Study/Flutter/another/HelpingHands/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-mk/values-mk.xml",
             "map": [
                 {
                     "source": "/home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-basement-16.2.0.aar/9d8649d45886f7916bdf108d5dcc1d37/res/values-mk/values.xml",

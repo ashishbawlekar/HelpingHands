@@ -5,7 +5,12 @@ import 'Authentication.dart';
 Future<FirebaseUser> refreshUser(){
   return Future.delayed(
     Duration(seconds: 3),
-    () async => await FirebaseAuth.instance.currentUser(),
+    () async {
+      var user = await FirebaseAuth.instance.currentUser();
+      
+      user.reload();
+      return user;
+    },
   );
 }
 
@@ -21,7 +26,7 @@ class _VerificationNgoState extends State<VerificationNgo> {
 ValueNotifier isVerified;
   FirebaseUser _user;
   TextEditingController _smsCode = TextEditingController();
-  var sentEmail = false, otp = false, verifiedEmail = false;
+  var sentEmail = false, otpChecked = false, verifiedEmail = false;
   @override
   void initState() { 
     FirebaseAuth.instance.currentUser().then((user){_user = user;});
@@ -45,17 +50,14 @@ Future<bool> _onWillPop(){
     return showDialog(
       context: context,
       builder: (context) => new AlertDialog(
-        title: new Text('Are you sure?'),
-        content: new Text('Do you want to exit an App'),
+        title: new Text('Sorry'),
+        content: new Text('You cannot exit at this point.'),
         actions: <Widget>[
           new FlatButton(
             onPressed: () => Navigator.of(context).pop(false),
-            child: new Text('No'),
+            child: new Text('OK'),
           ),
-          new FlatButton(
-            onPressed: () => Navigator.of(context).pop(true),
-            child: new Text('Yes'),
-          ),
+
         ],
       ),
     ) ?? false;
@@ -98,6 +100,9 @@ Future<bool> _onWillPop(){
                       builder: (context, snapshot){
                         if(snapshot.connectionState == ConnectionState.done){
                           verifiedEmail = snapshot.data.isEmailVerified;
+                          setState(() {
+                            
+                          });
                           return Text("Email Verified :" + verifiedEmail.toString());
                         }
                         else{
@@ -130,11 +135,18 @@ Future<bool> _onWillPop(){
                         maxLength: 6,
                         autocorrect: false,
                         controller: _smsCode,
+                        onChanged: (val){
+                          if(val.length == 6){
+                            otpChecked = true;
+                          }else{
+                            otpChecked = false;
+                          }
+                        },
                       ),
                       RaisedButton(
                         child: Text("Submit OTP"),
                         
-                        onPressed: !(sentEmail && verifiedEmail && (_smsCode.text.length == 6 )) ? null : () async {
+                        onPressed: !(sentEmail && verifiedEmail && otpChecked) ? null : () async {
                           if(widget.phoneAuth == null ) throw Exception("Phone Auth was null");
                           try{
                             widget.phoneAuth.linkCred(

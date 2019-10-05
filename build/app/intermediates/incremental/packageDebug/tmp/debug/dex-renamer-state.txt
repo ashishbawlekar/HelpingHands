@@ -1,10 +1,10 @@
-#Wed Oct 02 21:36:43 IST 2019
+#Sat Oct 05 12:38:01 IST 2019
 path.2=classes3.dex
 path.1=classes2.dex
 path.0=classes.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.2=/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/transforms/dexMerger/debug/0
-base.1=/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/transforms/dexMerger/debug/0
-base.0=/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/transforms/dexMerger/debug/0
+base.2=/home/riki/Desktop/Study Material/Self-Study/Flutter/another/HelpingHands/build/app/intermediates/transforms/dexMerger/debug/0
+base.1=/home/riki/Desktop/Study Material/Self-Study/Flutter/another/HelpingHands/build/app/intermediates/transforms/dexMerger/debug/0
+base.0=/home/riki/Desktop/Study Material/Self-Study/Flutter/another/HelpingHands/build/app/intermediates/transforms/dexMerger/debug/0

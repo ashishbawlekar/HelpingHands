@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/home/riki/Desktop/Study Material/Self-Study/Flutter/another/HelpingHands/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
                     "source": "/home/riki/.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/fb2e7a2034b08472b9c669fca1d63577/res/values/values.xml",
@@ -35,6 +35,25 @@
                         "startOffsets": "3562,4740",
                         "endColumns": "67,166",
                         "endOffsets": "3625,4902"
+                    }
+                },
+                {
+                    "source": "/home/riki/Desktop/Study Material/Self-Study/Flutter/another/HelpingHands/android/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "347"
+                    },
+                    "to": {
+                        "startLines": "84",
+                        "startColumns": "4",
+                        "startOffsets": "6960",
+                        "endLines": "88",
+                        "endColumns": "12",
+                        "endOffsets": "7252"
                     }
                 },
                 {
@@ -95,7 +114,7 @@
                     }
                 },
                 {
-                    "source": "/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/build/app/generated/res/google-services/debug/values/values.xml",
+                    "source": "/home/riki/Desktop/Study Material/Self-Study/Flutter/another/HelpingHands/build/app/generated/res/google-services/debug/values/values.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",
@@ -109,25 +128,6 @@
                         "startOffsets": "6033,6177,6291,6373,6477,6586,6706,6809",
                         "endColumns": "143,113,81,103,108,119,102,79",
                         "endOffsets": "6172,6286,6368,6472,6581,6701,6804,6884"
-                    }
-                },
-                {
-                    "source": "/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands/android/app/src/main/res/values/styles.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "6",
-                        "endColumns": "12",
-                        "endOffsets": "347"
-                    },
-                    "to": {
-                        "startLines": "84",
-                        "startColumns": "4",
-                        "startOffsets": "6960",
-                        "endLines": "88",
-                        "endColumns": "12",
-                        "endOffsets": "7252"
                     }
                 }
             ]

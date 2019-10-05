@@ -22,6 +22,9 @@ UserData dummyNgo = NgoUserData(
   ngoEmail: "",
   ngoDescription: "",
   ngoRepName: "",
+  ngoZipCode: "",
+  city: "",
+
 );
 class NgoUserData extends UserData{
   final String ngoName;
@@ -34,6 +37,8 @@ class NgoUserData extends UserData{
   final String ngoTelephone;
   final String ngoEmail;
   final String ngoAddress;
+  final String city;
+  final String ngoZipCode;
   // (    @required this.ngoName,
   //   @required ngoRepName,
   //   @required ngologoUrl,
@@ -44,6 +49,8 @@ class NgoUserData extends UserData{
   //   @required ngoEmail, 
   // });
   NgoUserData({
+    this.city,
+    this.ngoZipCode,
     this.ngoAddress,
     this.ngoName, 
     this.ngoRepName,

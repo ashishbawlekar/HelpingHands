@@ -3,6 +3,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:helping_hands/Registration/Authentication.dart';
 import 'package:helping_hands/Home/PostPage.dart';
+import 'package:helping_hands/Registration/Login.dart';
 import 'package:helping_hands/Utils/UserData.dart';
 
 FirebaseUser _user;
@@ -91,7 +92,7 @@ class _HomeDrawerState extends State<HomeDrawer> with SingleTickerProviderStateM
                     return CircleAvatar(
                       backgroundImage: Image.asset("assets/emptyProfile.png").image,
                       radius: _drawerRadius.value,
-                    );;
+                    );
                   }
                 },
               ),
@@ -103,6 +104,19 @@ class _HomeDrawerState extends State<HomeDrawer> with SingleTickerProviderStateM
                 onPressed: (){
                   // Implement Sign out
                   print("Signing out!");
+                  Navigator.of(context).pop();
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return Login();
+                      }
+
+                    ),
+                     );
+                  // Navigator.popAndPushNamed(context, "/Login");
+                  // Navigator.popUntil(context, ModalRoute.withName("/Login"));
+                  
                 },
               ),
             ],

@@ -130,6 +130,8 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
     _controllerR.dispose();
     super.dispose();
   }
+
+  bool invalidData = false;
   TextEditingController _email = new TextEditingController();
   TextEditingController _password = new TextEditingController();
   // var registerAnim = "idle";
@@ -315,6 +317,10 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                             // autofocus: true,
                             controller: _email,
                             decoration: InputDecoration(
+                              labelText: invalidData ? "Invalid Email" : null,
+                              labelStyle: TextStyle(
+                                color: Colors.red,
+                              ),
                               hintText: "Enter your Email ID",
                               fillColor: Colors.redAccent,
                               prefixIcon: Icon(Icons.mail_outline),
@@ -351,6 +357,10 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                               // autofocus: true,
                               controller: _password,
                               decoration: InputDecoration(
+                              labelText: invalidData ? "Invalid Password" : null,
+                              labelStyle: TextStyle(
+                                color: Colors.red,
+                              ),
                               hintText: "Enter your password ",
                               prefixIcon: Icon(Icons.lock),
                               fillColor: Colors.redAccent,
@@ -401,6 +411,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                           onPressed: (){
                               String email = _email.text.toString().trim();
                               String pass = _password.text.toString(); 
+                              
                               // FirebaseUser currentUser;
                               // Check if doc exists in NgoUsers before letting user get to NgoHome
                               // To prevent people from seeing NGO page without having to sign up as NGO
@@ -417,8 +428,10 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                                   print("Home Volunteer is under construction");
                                 }
                               }).catchError((err){
+                                setState(() {
+                                  invalidData = true;
+                                });
                                 print(err);
-                                // print(err.);
                               });
                               }),
                         

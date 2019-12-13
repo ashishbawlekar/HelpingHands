@@ -1,6 +1,6 @@
 // This is a generated file; do not edit or check into version control.
 FLUTTER_ROOT=/home/riki/flutter
-FLUTTER_APPLICATION_PATH=/home/riki/Desktop/Study Material/Self-Study/Flutter/Helping Hands/HelpingHands
+FLUTTER_APPLICATION_PATH=/home/riki/Desktop/Study/Project/HelpingHands
 FLUTTER_TARGET=lib/main.dart
 FLUTTER_BUILD_DIR=build
 SYMROOT=${SOURCE_ROOT}/../build/ios

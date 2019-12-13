@@ -100,9 +100,9 @@ Future<bool> _onWillPop(){
                       builder: (context, snapshot){
                         if(snapshot.connectionState == ConnectionState.done){
                           verifiedEmail = snapshot.data.isEmailVerified;
-                          setState(() {
+                          // setState(() {
                             
-                          });
+                          // });
                           return Text("Email Verified :" + verifiedEmail.toString());
                         }
                         else{

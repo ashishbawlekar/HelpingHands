@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 
+
 class EmailAuth{
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   Future<FirebaseUser> signUpWithEmail(String email, String password) async {
@@ -14,7 +15,6 @@ class EmailAuth{
     );
     print(user.uid);
     return user;
-    
   }
 
   Future<FirebaseUser> signInWithEmail(String email, String password) async{
@@ -28,6 +28,7 @@ class EmailAuth{
 
 
 }
+
 
 class PhoneAuth{
   String verificationId;
@@ -86,7 +87,8 @@ class PhoneAuth{
     }catch(exp){
       print(exp.message);
     }
-    print("Auth Credential : " + authCred.toString());
+    print("Auth Credential : " );
+    print(authCred);
     final user = await FirebaseAuth.instance.currentUser();
     await user.linkWithCredential(authCred);
 

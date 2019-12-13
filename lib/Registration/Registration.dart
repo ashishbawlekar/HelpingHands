@@ -17,7 +17,7 @@ class Registration extends StatelessWidget {
                  GestureDetector(
                    
                    onTap: (){
-                     Navigator.push(context, 
+                     Navigator.pushReplacement(context, 
                      MaterialPageRoute(
                        builder: (context) => NgoReg(),
                      )

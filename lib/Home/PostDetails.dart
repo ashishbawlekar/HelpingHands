@@ -1,7 +1,9 @@
 
+import 'package:back_button_interceptor/back_button_interceptor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
 import 'package:flutter/rendering.dart';
+import 'package:helping_hands/Home/PostPage.dart';
 
 
 class PostDetails extends StatefulWidget {
@@ -68,7 +70,6 @@ class _PostDetailsState extends State<PostDetails> with SingleTickerProviderStat
 //  git@github.com:Riki432/HelpingHands.git 
   @override
   Widget build(BuildContext context) {
-
     return MaterialApp(
       title: "Post Details",
       home: Scaffold(
@@ -86,7 +87,7 @@ class _PostDetailsState extends State<PostDetails> with SingleTickerProviderStat
                init = 0.0;
                print(distance); 
               if(distance > 120){
-                 Navigator.pop(context);
+                 Navigator.of(context).pop();
                }
              },
              child: Container(

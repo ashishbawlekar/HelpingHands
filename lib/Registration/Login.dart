@@ -5,6 +5,8 @@ import 'package:flutter/rendering.dart';
 import 'package:helping_hands/Home/HomeVolunteer.dart';
 import 'package:helping_hands/Registration/Authentication.dart';
 import 'package:helping_hands/Home/HomeNGO.dart';
+import 'package:helping_hands/Utils/UserData.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'Authentication.dart';
 import 'package:flare_flutter/flare_actor.dart';
 // import 'package:toast/toast.dart';
@@ -69,7 +71,13 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
 
   
   @override
-  void initState() { 
+  void initState() {
+    // SharedPreferences prefs = await SharedPreferences.getInstance(); 
+    // if (await UserData.userDataExists() ){
+    //   _email.text = prefs.getString("username");
+    //   _password.text = prefs.getString("password");
+    //   isVol = prefs.getBool("isVol");
+    // }
     super.initState();
     _controllerR = AnimationController(
       vsync: this,
@@ -415,16 +423,20 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                               // FirebaseUser currentUser;
                               // Check if doc exists in NgoUsers before letting user get to NgoHome
                               // To prevent people from seeing NGO page without having to sign up as NGO
+                              
+                              UserData.storeData(email, pass, isVol);
                               EmailAuth()
                               ..signInWithEmail(email, pass)
                               .then((currentUser){
                                 if(!isVol){
+                                UserData.storeData(email, pass, isVol);
                                 Navigator.push(context,
                                   MaterialPageRoute(
                                    builder: (context) => HomeNgo(),
                                   ),
                                 );
                                 }else{
+                                  // UserData.storeData(email, pass, isVol);
                                   print("Home Volunteer is under construction");
                                 }
                               }).catchError((err){

@@ -168,15 +168,18 @@ class _CreatePostState extends State<CreatePost> with SingleTickerProviderStateM
                       );
                           if(currentUser == null) return;
                           String url = await uploadFile(currentUser.uid);
+                          // FirebaseUser user = await FirebaseAuth.instance.currentUser();
+                          var doc = await Firestore.instance.collection("NgoUsers").document(currentUser.uid).get();
                           if(url == null) throw Exception("Something went wrong in uploading file");
                               Firestore.instance.collection("/Posts").document()
                                 ..setData({
                                    "imageUrl" : url, 
-                                   "userName" : currentUser.displayName, 
+                                   "userName" : doc["Name"], 
                                    "description" : controller.text,
                                   //  "postID",
                                    "eventName" : "Test Event",
                                    "ngoName" : "Test NGO",
+                                   "TimeStamp" : DateTime.now(),
                                 }).then((doc){
                                   Navigator.of(context, rootNavigator: true).pop();                            
                                   setState(() {

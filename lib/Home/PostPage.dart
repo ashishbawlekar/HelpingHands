@@ -42,12 +42,25 @@ class _PostPageState extends State<PostPage> {
             elevation: 20.0,
             focusColor: Colors.red,  
         ),
-        body: ListView(
-          children: <Widget>[
-            PostList(),
-            // Post2(),
-            Post(),
-          ],
+        body: FutureBuilder<Widget>(
+          builder: (context, snapshot) {
+            final posts = Provider.of<QuerySnapshot>(context); 
+            return ListView.builder(
+              itemCount: posts.documents.length,
+              itemBuilder: (_, count){
+                return Post(
+                  ngoName: posts.documents[count].data["ngoName"], // == null? " " : posts.documents[count].data["ngoName"] ,
+                  imageUrl: posts.documents[count].data["imageUrl"],
+                  description: posts.documents[count].data["description"],
+                  eventName: posts.documents[count].data["eventName"],
+                  userName: posts.documents[count].data["userName"], // ==  null? " ": posts.documents[count].data["Name"],
+                  postID: posts.documents[count].documentID,
+                );
+              },
+            // ),
+      // ),
+    );
+          }
         ),
       ),
     );
@@ -55,7 +68,7 @@ class _PostPageState extends State<PostPage> {
 }
 
 
-class DPost extends StatelessWidget{
+class Post extends StatelessWidget{
   String imageUrl;
   String userName;
   String description;
@@ -64,7 +77,7 @@ class DPost extends StatelessWidget{
   String ngoName;
 
 
-  DPost({
+  Post({
     this.imageUrl, 
     this.userName, 
     this.description,
@@ -87,6 +100,9 @@ class DPost extends StatelessWidget{
                   image: image,
                   userName: userName,
                   description: fullDescrption,
+                  postID: postID,
+                  eventName: eventName,
+                  ngoName: ngoName,
                 ),
               ),
             );
@@ -98,7 +114,10 @@ class DPost extends StatelessWidget{
                 ListTile(
                   leading: Icon(Icons.landscape), //Cirular Avatar
                   title: Text(userName),
-                  subtitle: Text(fullDescrption.substring(0, 20) + "..."),
+                  subtitle: Text(
+                    fullDescrption.length > 20 ? fullDescrption.substring(0, 20) + "..." : fullDescrption,
+                    
+                    ),
                 ),
                 Hero(
                   tag: postID,
@@ -114,67 +133,9 @@ class DPost extends StatelessWidget{
 
 final CollectionReference postCollection = Firestore.instance.collection('Posts');
 Stream<QuerySnapshot> get posts{
-    return postCollection.snapshots();
+    return postCollection.orderBy("TimeStamp").snapshots();
 }
 }
-
-class Post extends StatelessWidget{
-
-  // Post({
-  //   this.imageUrl, 
-  //   this.userName, 
-  //   this.description,
-  //   this.postID,
-  //   this.eventName,
-  //   this.ngoName,
-  // })
-      
-  @override
-  Widget build(BuildContext context) {
-    var image = Image.asset("assets/Beach.jpeg");
-    var userName = "Name of User";
-    String fullDescrption = "This is the full description of the image i don't care I can add whatever I want allalallalalallalallafbafeufgbaeub fueaaibf wiudhauwbawbfuw fwabfuiawbfuwabfa fwuibfaiuwbfia wfafiabwfawufiuab iwufbawfawbfa wfawbfawfiuab awfibawfi wfbawug awgibawawugbawf awfiubawfawufbwafa fwbafiuawfbaw fawufbawfbwiuabwaf afbaiuwfbafiuwbfwi";
-    Post();
-    return GestureDetector(
-          onTap: (){
-            Navigator.of(context, rootNavigator: true).push( 
-              MaterialPageRoute(
-                builder: (context) => PostDetails(
-                  image: image,
-                  userName: userName,
-                  description: fullDescrption,
-                ),
-              ),
-            );
-          },
-          child: Container(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                ListTile(
-                  leading: Icon(Icons.landscape), //Cirular Avatar
-                  title: Text(userName),
-                  subtitle: Text(fullDescrption.substring(0, 20) + "..."),
-                ),
-                Hero(
-                  tag: "Post",
-                  child: image,
-                  ),
-
-              ],
-            ),
-            ),
-          );
-      }
-  
-
-final CollectionReference postCollection = Firestore.instance.collection('Posts');
-Stream<QuerySnapshot> get posts{
-    return postCollection.snapshots();
-}
-
-}
-
 
 class PostList extends StatefulWidget {
   @override
@@ -184,23 +145,35 @@ class PostList extends StatefulWidget {
 class _PostListState extends State<PostList> {
   @override
   Widget build(BuildContext context) {
-//     final posts = Provider.of<QuerySnapshot>(context);
-//     print(posts.documents[0]);
-//     print(posts.documents[0].data);
-//     // print(posts.documents[0].data);
-//     ListView.builder(
-//       itemCount: posts.documents.length,
-//       itemBuilder: (_, count){
-//         return DPost(
-// // imageUrl: posts.documents[count].data[""],
-//         );
-//       },
-//     );
-      return Container(
-        height: 100.0,
-        width: 100.0,
-        color: Colors.red,
-      );
+    final posts = Provider.of<QuerySnapshot>(context);
+    print(posts.documents.length);
+    // print(posts.documents[3].data);
+    print(posts.documents[0].data);
+    return 
+    // SingleChildScrollView(
+    //       child: Container(
+    //       height: MediaQuery.of(context).size.height,
+    //     child: 
+        ListView.builder(
+          itemCount: posts.documents.length,
+          itemBuilder: (_, count){
+            return Post(
+              ngoName: posts.documents[count].data["ngoName"], // == null? " " : posts.documents[count].data["ngoName"] ,
+              imageUrl: posts.documents[count].data["imageUrl"],
+              description: posts.documents[count].data["description"],
+              eventName: posts.documents[count].data["eventName"],
+              userName: posts.documents[count].data["userName"], // ==  null? " ": posts.documents[count].data["Name"],
+              postID: posts.documents[count].documentID,
+            );
+          },
+        // ),
+      // ),
+    );
+      // return Container(
+      //   height: 100.0,
+      //   width: 100.0,
+      //   color: Colors.red,
+      // );
   }
 }
 

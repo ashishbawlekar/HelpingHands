@@ -697,7 +697,7 @@ class _NGO_Reg_FormState extends State<NGO_Reg_Form>
     try {
       if (user == null) throw Exception("Null User");
       //  final u = UserUpdateInfo();
-
+      
       final String url = await uploadFile(user.uid);
 
       uploadToDB(user.uid, url);
@@ -720,7 +720,7 @@ class _NGO_Reg_FormState extends State<NGO_Reg_Form>
       print(err);
     }
   }
-
+  
   uploadToDB(String uid, String url) {
     Firestore.instance.collection("/NgoUsers").document(uid)
       ..setData({

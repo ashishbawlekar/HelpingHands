@@ -6,10 +6,48 @@ import 'package:firebase_storage/firebase_storage.dart';
 
 import 'package:flutter/material.dart';
 import 'dart:async';
+
+import 'package:shared_preferences/shared_preferences.dart';
 abstract class UserData{
   // UserData getData(String uid);
 //  static Future<UserData> getDataAsFuture(String uid);
+static Future<bool> storeData(String username, String password, bool isVol) async{
+ 
+  SharedPreferences.getInstance().then((prefs){
+  prefs.setString("username", username);
+  prefs.setString("password", password);
+  prefs.setBool("isVol", isVol);
+  return true;
+  }).catchError((e){
+    print(e);
+    return false;
+  });
+  return false;
+}
+
+static Future<bool> userDataExists() async{
+  final prefs = await SharedPreferences.getInstance();
+  String name = prefs.getString('username');
+  String password = prefs.getString('password');
+  return !(name == null || password == null);
+}
   
+static Future<String> getUsername() async{
+  final prefs = await SharedPreferences.getInstance();
+  return prefs.getString('username');
+}
+
+static Future<String> getPassword() async{
+  final prefs = await SharedPreferences.getInstance();
+  return prefs.getString('password');
+}
+
+static Future<bool> getVol() async{
+  final prefs = await SharedPreferences.getInstance();
+  return prefs.getBool('isVol');
+}
+
+
 }
 
 

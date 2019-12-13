@@ -10,9 +10,17 @@ class PostDetails extends StatefulWidget {
   final Image image;
   final String description;
   final String userName;
-  final String ngoName = "Sasti Astha";
-  final String eventName = "Bhoot Bhagao";
-  PostDetails({this.image, this.description, this.userName});
+  final String ngoName; //= "Sasti Astha";
+  final String eventName;// = "Bhoot Bhagao";
+  final String postID;
+  PostDetails({
+    @required this.image, 
+    @required this.description, 
+    @required this.userName,
+    @required this.postID,
+    @required this.ngoName,
+    @required this.eventName
+    });
   
   @override
   _PostDetailsState createState() => _PostDetailsState();
@@ -127,8 +135,8 @@ class _PostDetailsState extends State<PostDetails> with SingleTickerProviderStat
                     child: Padding(
                       padding: const EdgeInsets.symmetric(vertical: 20.0, horizontal: 30.0),
                       child: Hero(
-                        tag: "Post",
-                        child: Image.asset("assets/Beach.jpeg", fit: BoxFit.contain)
+                        tag: widget.postID,
+                        child: widget.image,//Image.asset("assets/Beach.jpeg", fit: BoxFit.contain)
                         ),
                     ),
                   ),

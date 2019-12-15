@@ -77,15 +77,9 @@ class NgoUserData extends UserData{
   final String ngoAddress;
   final String city;
   final String ngoZipCode;
-  // (    @required this.ngoName,
-  //   @required ngoRepName,
-  //   @required ngologoUrl,
-  //   @required ngoDescription,
-  //   @required ngoWebsite,
-  //   @required ngoContact,
-  //   @required ngoTelephone,
-  //   @required ngoEmail, 
-  // });
+  final bool isVolunteer = false;
+
+  final String ngoCity;
   NgoUserData({
     this.city,
     this.ngoZipCode,
@@ -98,7 +92,8 @@ class NgoUserData extends UserData{
     this.ngoContact,
     this.ngoTelephone,
     this.ngoEmail,
-    this.ngoLogoUrl,
+    this.ngoLogoUrl, 
+    this.ngoCity,
     });
 
     
@@ -111,6 +106,9 @@ class NgoUserData extends UserData{
           final data = document.data;
           print(document.exists);
           ngo = NgoUserData(
+            ngoAddress: data['Address'],
+            ngoZipCode: data['ZipCode'],
+            ngoCity: data['City'],
             ngoName: data['Name'],
             ngoContact: data['Contact'],
             ngoRepName: data['RepName'],
@@ -119,6 +117,7 @@ class NgoUserData extends UserData{
             ngoEmail:  data['Email'],
             ngoTelephone:  data['Telephone'],
             ngoWebsite:  data['Website'],
+            // isVolunteer: false,
           );
         return ngo;
         }
@@ -126,8 +125,12 @@ class NgoUserData extends UserData{
       );
       throw Exception("Unable to load document");
     }
-
-    static Future<UserData> getDataAsFuture() async {
+  @override
+  @override
+  String toString() {
+  return "This data belongs to $ngoName which is represented by $ngoRepName located at $ngoAddress. You can contact us at $ngoContact.";
+   }
+    static Future<NgoUserData> getDataAsFuture() async {
       final user = await FirebaseAuth.instance.currentUser();
       final doc = Firestore.instance.document("/NgoUsers/${user.uid}");
          NgoUserData ngo;
@@ -136,16 +139,20 @@ class NgoUserData extends UserData{
             //(document){
           final data = document.data;
           ngo = NgoUserData(
-          ngoName: data['Name'],
-          ngoContact: data['Contact'],
-          ngoRepName: data['RepName'],
-          ngoLogoUrl:  data['LogoUrl'],
-          ngoDescription:  data['Description'],
-          ngoEmail:  data['Email'],
-          ngoTelephone:  data['Telephone'],
-          ngoWebsite:  data['Website'],
-        );
-          print("NGO NAME : ${data['Name']}");
+            ngoAddress: data['Address'],
+            ngoZipCode: data['ZipCode'],
+            ngoCity: data['City'],
+            ngoName: data['Name'],
+            ngoContact: data['Contact'],
+            ngoRepName: data['RepName'],
+            ngoLogoUrl:  data['LogoUrl'],
+            ngoDescription:  data['Description'],
+            ngoEmail:  data['Email'],
+            ngoTelephone:  data['Telephone'],
+            ngoWebsite:  data['Website'],
+            // isVolunteer: false,
+          );
+          // print("NGO NAME : ${data['Name']}");
           return ngo;
          }
          catch(ex){
@@ -169,6 +176,7 @@ class VolunteerUserData extends UserData{
   int eventCount;
   final String profileUrl;
   var profile;
+  final bool isVolunteer = true;
 
   VolunteerUserData({
     @required this.displayName,

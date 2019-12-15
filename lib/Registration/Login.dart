@@ -1,16 +1,23 @@
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:get_it/get_it.dart';
 import 'package:helping_hands/Home/HomeVolunteer.dart';
 import 'package:helping_hands/Registration/Authentication.dart';
 import 'package:helping_hands/Home/HomeNGO.dart';
 import 'package:helping_hands/Utils/UserData.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:toast/toast.dart';
 import 'Authentication.dart';
 import 'package:flare_flutter/flare_actor.dart';
 // import 'package:toast/toast.dart';
 
+bool inRange(num num1, num num2, num range){
+  return num1 + range > num2 && num2 + range > num1;
+}
 
 class LoginVia extends AnimatedWidget{
   final Animation<Offset> register;
@@ -238,9 +245,14 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                                              splashColor: Colors.redAccent,
                                              onPressed: () async {
                                              print("Google");
+                                             
                                              if(isVol){
                                               FirebaseUser user = await GoogleLogin.googleSignIn();
-                                              if(user.metadata.creationTimestamp == user.metadata.lastSignInTimestamp){
+                                              // DateTime.now().
+                                              print(user.metadata.creationTimestamp);
+                                              final doc = await Firestore.instance.collection("VolunteerUsers").document(user.uid).get();
+                                              if(!doc.exists)
+                                              {
                                                 print("New User");
                                                 final dataUploaded = await GoogleLogin.sendVolunteerDataToDB(user);
                                                 if(dataUploaded){
@@ -249,10 +261,12 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                                                     builder: (context) => HomeVolunteer(),
                                                   )
                                                   );
-                                                }else{
+                                                }
+                                                else{
                                                   print("Data Upload Failed");
                                                 }
-                                              }else{
+                                              }
+                                              else{ //Doc already exists
                                                 print("Not New User");
                                                  Navigator.push(context, 
                                                   MaterialPageRoute(
@@ -260,6 +274,14 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                                                   )
                                                   );
                                               }
+                                             }else{ //Not a volunteer
+                                              //  Scaffold.of(context).showSnackBar(
+                                                //  SnackBar(content: Text("Google Sign in not for NGOs"),)
+                                              //  );
+                                              Toast.show(
+                                                "Google Sign-In not available for NGOs", context,
+                                                duration: 3,
+                                                );
                                              }
                                              },
                                              elevation: 10.0,
@@ -295,30 +317,13 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                                    color: Color.fromARGB(255, 37, 204, 247),
                                    splashColor: Color.fromARGB(255, 27, 156, 252),
                                  ),
-                                 
                                    ],
                                  ),
-                                 
                                ],
                              ),
                            ),
                          
-
-                        // Container(
-                        //   alignment: Alignment.centerLeft,
-                        //   margin: EdgeInsets.symmetric(horizontal: 0.0, vertical: 0.0),
-                        //   child: Text(
-                        //     "Enter your name: ",
-                        //     style: TextStyle(
-                        //       fontWeight: FontWeight.w300,
-                        //       fontSize:  18.0
-                        //     ),
-                        //     )
-                        //   ),
                         Container(
-                          // decoration: BoxDecoration(
-
-                          // ),
                           padding: EdgeInsets.symmetric(horizontal: 20.0, vertical: 5.0),
                           transform: Matrix4.rotationZ(0.01),
                           child: TextField(
@@ -430,14 +435,30 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                               .then((currentUser){
                                 if(!isVol){
                                 UserData.storeData(email, pass, isVol);
+                                NgoUserData.getDataAsFuture().then((ngoData){
+                                  print("got ngo data of ${ngoData.ngoName}");
+                                  GetIt.instance.registerSingleton<NgoUserData>(ngoData);
+                                  
+                                });
                                 Navigator.push(context,
                                   MaterialPageRoute(
                                    builder: (context) => HomeNgo(),
                                   ),
                                 );
                                 }else{
-                                  // UserData.storeData(email, pass, isVol);
-                                  print("Home Volunteer is under construction");
+                                  UserData.storeData(email, pass, isVol);
+                                  EmailAuth()
+                                  ..signInWithEmail(email, pass)
+                                  .then((currentUser){
+                                    VolunteerUserData.getDataAsFuture().then((volunteerData){
+                                      GetIt.instance.registerSingleton<VolunteerUserData>(volunteerData);
+                                    });  
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(builder: (_) => HomeVolunteer()) 
+                                      );
+                                  });
+                                  
                                 }
                               }).catchError((err){
                                 setState(() {

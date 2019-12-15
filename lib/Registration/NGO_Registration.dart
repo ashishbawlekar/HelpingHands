@@ -14,7 +14,7 @@ import 'package:helping_hands/Registration/Authentication.dart';
 import 'package:helping_hands/Home/HomeNGO.dart';
 import 'package:helping_hands/Utils/Cities.dart';
 import 'package:helping_hands/Utils/UserData.dart';
-import 'package:helping_hands/Registration/Verification.dart';
+// import 'package:helping_hands/Registration/Verification.dart';
 // import 'package:image_crop/image_crop.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:helping_hands/Utils/CropImage.dart';
@@ -75,16 +75,14 @@ class _NgoRegState extends State<NgoReg> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
-    BackButtonInterceptor.removeAll();
+    
+    BackButtonInterceptor.removeByName("Confirm");
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Registration",
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Text("Registration"),
           elevation: 20.0,
@@ -106,7 +104,7 @@ class _NgoRegState extends State<NgoReg> {
             print(distance);
           },
         ),
-      ),
+      
     );
   }
 }
@@ -139,6 +137,15 @@ class _NGO_Reg_FormState extends State<NGO_Reg_Form>
   StorageReference storageReference;
   Animation progressColor;
   AnimationController _animationController;
+  Timer t;
+
+
+  @override
+  void dispose() { 
+    if(t!=null) t.cancel();
+    super.dispose();
+  }
+
 
   @override
   void initState() {
@@ -208,7 +215,7 @@ class _NGO_Reg_FormState extends State<NGO_Reg_Form>
   // TextEditingController ;
   @override
   Widget build(BuildContext context) {
-    bool submitted = false;
+    // bool submitted = false;
     return Form(
       key: _formKey,
       child: SingleChildScrollView(
@@ -562,7 +569,7 @@ class _NGO_Reg_FormState extends State<NGO_Reg_Form>
     final phoneAuth = PhoneAuth();
 
     phoneAuth.sendSms("+91" + ngoContact.text);
-    Timer t;
+    
     // print("OTP send! for ${user.uid}");
     Navigator.of(context, rootNavigator: true).pop();
     final otp = await showDialog(
@@ -735,6 +742,7 @@ class _NGO_Reg_FormState extends State<NGO_Reg_Form>
         "Address": ngoAddress.text,
         "City": city,
         "ZipCode": ngoZipCode.text,
+        "isVolunteer" : false,
       });
   }
 

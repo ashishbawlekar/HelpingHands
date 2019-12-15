@@ -1,8 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:helping_hands/Registration/Authentication.dart';
-import 'package:helping_hands/Home/PostPage.dart';
+// import 'package:helping_hands/Registration/Authentication.dart';
+import 'package:helping_hands/Home/Posts/PostPage.dart';
+import 'package:helping_hands/Registration/Login.dart';
 import 'package:helping_hands/Utils/UserData.dart';
 
 FirebaseUser _user;
@@ -76,10 +77,15 @@ class _HomeDrawerState extends State<HomeDrawer> with SingleTickerProviderStateM
                   if(snapshot.connectionState == ConnectionState.done && snapshot.hasData){
                     _userData = snapshot.data;
                     _userData.profile = Image.network(snapshot.data.profileUrl).image;
-                    return CircleAvatar(
-                     backgroundImage: _userData.profile,
-                      radius: _drawerRadius.value,
-                      //  child: Text(snapshot.data.displayName), 
+                    return Column(
+                      children: <Widget>[
+                        CircleAvatar(
+                         backgroundImage: _userData.profile,
+                          radius: _drawerRadius.value,
+                          //  child: Text(snapshot.data.displayName), 
+                        ),
+                        Text(_userData.displayName),
+                      ],
                     );
                   }else{
                       return  CircleAvatar(
@@ -103,6 +109,7 @@ class _HomeDrawerState extends State<HomeDrawer> with SingleTickerProviderStateM
                 onPressed: (){
                   // Implement Sign out
                   print("Signing out!");
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (_) => Login()));
                 },
               ),
             ],
@@ -174,7 +181,7 @@ class _HomeVolunteerState extends State<HomeVolunteer> with TickerProviderStateM
             controller: _tabController,
             tabs: <Widget>[
               Tab(text: "Posts",),
-              Tab(text: "Profile",),
+              Tab(text: "Events",),
             ],
             labelPadding: EdgeInsets.all(10.0),
 
@@ -186,7 +193,7 @@ class _HomeVolunteerState extends State<HomeVolunteer> with TickerProviderStateM
           controller: _tabController,
           children: <Widget>[
             PostPage(),
-            Text("Profile Page"),
+            Text("Events"),
           ],
         ),
       ),

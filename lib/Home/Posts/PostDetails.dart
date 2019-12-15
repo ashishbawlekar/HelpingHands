@@ -1,17 +1,16 @@
 
-import 'package:back_button_interceptor/back_button_interceptor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/animation.dart';
 import 'package:flutter/rendering.dart';
-import 'package:helping_hands/Home/PostPage.dart';
+
 
 
 class PostDetails extends StatefulWidget {
   final Image image;
   final String description;
   final String userName;
-  final String ngoName; //= "Sasti Astha";
-  final String eventName;// = "Bhoot Bhagao";
+  final String ngoName;
+  final String eventName;
   final String postID;
   PostDetails({
     @required this.image, 

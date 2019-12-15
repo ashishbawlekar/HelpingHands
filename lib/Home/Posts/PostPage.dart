@@ -1,10 +1,10 @@
-import 'package:back_button_interceptor/back_button_interceptor.dart';
+// import 'package:back_button_interceptor/back_button_interceptor.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:helping_hands/Home/CreatePost.dart';
-import 'package:helping_hands/Home/PostDetails.dart';
-import 'package:helping_hands/Utils/UserData.dart';
-import 'package:helping_hands/Registration/Authentication.dart';
+import 'CreatePost.dart';
+import 'PostDetails.dart';
+// import 'package:helping_hands/Utils/UserData.dart';
+// import 'package:helping_hands/Registration/Authentication.dart';
 import 'package:provider/provider.dart';
 class PostPage extends StatefulWidget {
   // UserData userData;
@@ -19,7 +19,11 @@ class _PostPageState extends State<PostPage> {
   // final ph = PhoneAuth();
   // TextEditingController _smsCode = TextEditingController();
 @override
-  
+void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+
+  }  
 
   @override
   Widget build(BuildContext context) {
@@ -43,8 +47,25 @@ class _PostPageState extends State<PostPage> {
             focusColor: Colors.red,  
         ),
         body: FutureBuilder<Widget>(
+          // future: Future.delayed(Duration(seconds: 2)),
           builder: (context, snapshot) {
-            final posts = Provider.of<QuerySnapshot>(context); 
+            final posts = Provider.of<QuerySnapshot>(context);
+            if(posts == null){
+              return Center(
+                child: Container(
+                  child: Row(
+                    children: <Widget>[
+                      Text('Loading'),
+                      // LinearProgressIndicator(
+                      //   backgroundColor: Colors.greenAccent,
+                      //   value: 100,
+                      // ),
+                    ],
+                  ),
+                ),
+              );
+            } 
+            else
             return ListView.builder(
               itemCount: posts.documents.length,
               itemBuilder: (_, count){

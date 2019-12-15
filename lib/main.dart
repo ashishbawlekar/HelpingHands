@@ -4,10 +4,12 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 // import 'package:helping_hands/AnimationExampleBasic.dart';
-import 'package:helping_hands/Home/HomeNGO.dart';
-import 'package:helping_hands/Registration/Login.dart';
-import 'package:helping_hands/Registration/Registration.dart';
-import 'package:helping_hands/Registration/Registration_NGO.dart';
+import 'Home/HomeNGO.dart';
+import 'Registration/Login.dart';
+// import 'Registration.dart';
+
+import 'Registration/NGO_Registration.dart';
+import 'Registration/Registration.dart';
 
 class Router{
 static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -77,6 +79,9 @@ voteDown() {
  
   }
 
+
+
+
   // Future<bool> _onWillPop(){
   // print("In Will pop scope!");
   //   return showDialog(
@@ -118,6 +123,7 @@ voteDown() {
               mainAxisAlignment: MainAxisAlignment.center,
               // crossAxisAlignment: CrossAxisAlignment.end,
               children: <Widget>[
+                // TestMap(),
                 Text("Votes : $count"),
                 RaisedButton(
                   child: Text("Toggle OTP"),

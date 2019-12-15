@@ -11,6 +11,7 @@ description: A new Flutter project.
 # In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# Open Maps API KEY : 72a70a740b3f429e81a178e9115aeb08
 version: 1.0.0+1
 
 environment:
@@ -39,6 +40,10 @@ dependencies:
   back_button_interceptor: ^4.1.1
   provider:
   pull_to_refresh: ^1.4.5
+  # google_maps_flutter:
+  # flutter_map:
+  geopoint:
+  maps_launcher:
 
 
 dev_dependencies:

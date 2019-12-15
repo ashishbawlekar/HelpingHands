@@ -130,9 +130,9 @@ class GoogleLogin{
   The storage space is not ours. 
   */
 
-  
+  print("Setting data for user with uid : ${user.uid}");
     try{
-    final doc = await Firestore.instance.collection("VolunteerUsers").document(user.uid).setData(
+    await Firestore.instance.collection("VolunteerUsers").document(user.uid).setData(
           {
             "Name" : user.displayName,
             "Email" : user.email,

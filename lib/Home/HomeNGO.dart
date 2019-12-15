@@ -1,8 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:helping_hands/Registration/Authentication.dart';
-import 'package:helping_hands/Home/PostPage.dart';
+import 'package:helping_hands/Home/Events/EventPage.dart';
+// import 'package:helping_hands/Home/Events/EventPage.dart';
+import 'package:helping_hands/Home/Posts/PostPage.dart';
+// import 'package:helping_hands/Registration/Authentication.dart';
+// import 'package:helping_hands/Home/PostPage.dart';
 import 'package:helping_hands/Registration/Login.dart';
 import 'package:helping_hands/Utils/UserData.dart';
 
@@ -209,7 +212,7 @@ class _HomeNgoState extends State<HomeNgo> with TickerProviderStateMixin{
           controller: _tabController,
           children: <Widget>[
             PostPage(),
-            Text("Profile Page"),
+            EventPage(),
           ],
         ),
       ),

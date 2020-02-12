@@ -632,7 +632,7 @@ class _NGO_Reg_FormState extends State<NGO_Reg_Form>
                   FlatButton(
                     child: Text("Submit"),
                     onPressed: () {
-                      t.cancel();
+                      if(t != null) t.cancel();
                       Navigator.of(context, rootNavigator: true)
                           .pop(controller.text);
                     },
@@ -657,21 +657,30 @@ class _NGO_Reg_FormState extends State<NGO_Reg_Form>
     print(cu);
     final verification = cu.phoneNumber == null ? false : true;
     if (!verification) {
+      cu.delete();
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
           title: Text("ERROR"),
-          content: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text("Verification Failed"),
-              FlatButton(
-                child: Text("OK"),
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-              )
-            ],
+          content: Container(
+            constraints: BoxConstraints(
+              minWidth: 100.0,
+              minHeight: 100.0,
+              maxHeight: 200.0,
+              maxWidth: 200.0
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text("Verification Failed"),
+                FlatButton(
+                  child: Text("OK"),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                )
+              ],
+            ),
           ),
         ),
       );

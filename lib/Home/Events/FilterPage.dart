@@ -77,12 +77,12 @@ class _FilterPageState extends State<FilterPage> {
                 RaisedButton(
                   child: Text("Test"),
                   onPressed: (){
-                    NgoUserData data = GetIt.instance.get<NgoUserData>();
-                    print(data.toString());
+                    //NgoUserData data = GetIt.instance.get<NgoUserData>();
+                    // print(data.toString());
                     showAboutDialog(
                       context: context,
                       children: [
-                        Text(data.ngoName)
+                        Text("ngoName")
                       ]
 
                     );

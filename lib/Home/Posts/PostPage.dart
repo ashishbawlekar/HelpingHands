@@ -1,6 +1,8 @@
 // import 'package:back_button_interceptor/back_button_interceptor.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'CreatePost.dart';
 import 'PostDetails.dart';
 // import 'package:helping_hands/Utils/UserData.dart';
@@ -18,12 +20,21 @@ class _PostPageState extends State<PostPage> {
   // String verificationId;
   // final ph = PhoneAuth();
   // TextEditingController _smsCode = TextEditingController();
+  FirebaseUser currentUser;
 @override
 void dispose() {
     // TODO: implement dispose
     super.dispose();
-
+     
   }  
+
+  @override
+  void initState() { 
+    super.initState();
+    FirebaseAuth.instance.currentUser().then((user){
+      currentUser = user;
+      });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -46,10 +57,16 @@ void dispose() {
             elevation: 20.0,
             focusColor: Colors.red,  
         ),
-        body: FutureBuilder<Widget>(
+        body: FutureBuilder(
           // future: Future.delayed(Duration(seconds: 2)),
+          future: FirebaseAuth.instance.currentUser(),
           builder: (context, snapshot) {
             final posts = Provider.of<QuerySnapshot>(context);
+            
+            // for(var i = 0; i < posts.documents.length; i++)
+            // {
+            //   print(posts.documents[i].data);
+            // }
             if(posts == null){
               return Center(
                 child: Container(
@@ -65,7 +82,8 @@ void dispose() {
                 ),
               );
             } 
-            else
+            else{
+            this.currentUser = snapshot.data;
             return ListView.builder(
               itemCount: posts.documents.length,
               itemBuilder: (_, count){
@@ -76,11 +94,14 @@ void dispose() {
                   eventName: posts.documents[count].data["eventName"],
                   userName: posts.documents[count].data["userName"], // ==  null? " ": posts.documents[count].data["Name"],
                   postID: posts.documents[count].documentID,
+                  userUid: posts.documents[count].data["userUid"],
+                  currentUser : this.currentUser,
                 );
               },
             // ),
       // ),
     );
+            }
           }
         ),
       ),
@@ -96,6 +117,8 @@ class Post extends StatelessWidget{
   String postID;
   String eventName;
   String ngoName;
+  var userUid;
+  FirebaseUser currentUser;
 
 
   Post({
@@ -105,10 +128,14 @@ class Post extends StatelessWidget{
     this.postID,
     this.eventName,
     this.ngoName,
+    this.userUid,
+    this.currentUser
   });
       
   @override
   Widget build(BuildContext context) {
+    print(currentUser.uid);
+    print(this.userUid);
     var image = Image.network(this.imageUrl);
     var userName = this.userName;
     String fullDescrption = this.description;
@@ -135,9 +162,71 @@ class Post extends StatelessWidget{
                 ListTile(
                   leading: Icon(Icons.landscape), //Cirular Avatar
                   title: Text(userName),
+                  trailing: currentUser.uid == userUid ? FlatButton(
+                    onPressed: (){
+                      showDialog(
+                        context: context,
+                        // child: ,
+                        builder: (context){
+                          return AlertDialog(
+                            title: Text("Are you sure you want to delete this post?"),
+                            actions: <Widget>[
+                                  FlatButton(
+                                    child: Text("Yes"),
+                                    onPressed: (){
+                                      Firestore.instance.collection("/Posts").document(postID).delete();
+                                      Navigator.of(context).pop();
+                                    },
+                                  ),
+                                  FlatButton(
+                                    child: Text("No"),
+                                    onPressed: (){
+                                      Navigator.of(context).pop();
+                                    }    
+                                  )
+                              
+                            ],
+                            // content: Container(
+                            // height: 100.0,
+                            // width: 200.0,
+                            // decoration: BoxDecoration(
+                            //   color: Colors.white,
+                            //   shape: BoxShape.rectangle
+                            // ),
+                            // child: Column(
+                            //   children: <Widget>[
+                            //   Text("Are you sure you want to delete this post?"),
+                            //   Spacer(),
+                            //   Row(
+                            //     mainAxisAlignment: MainAxisAlignment.end,
+                            //     children: <Widget>[
+                            //       FlatButton(
+                            //         child: Text("Yes"),
+                            //         onPressed: (){
+                            //           //Firestore.instance.collection("/Posts").document(postID).delete();
+                            //           Navigator.of(context).pop();
+                            //         },
+                            //       ),
+                            //       FlatButton(
+                            //         child: Text("No"),
+                            //         onPressed: (){
+                            //           Navigator.of(context).pop();
+                            //         }    
+                            //       )
+                            //     ],
+                            //     )
+                            //   ],
+                            //   )
+                            // ),
+                          );
+                        }
+                      );
+                      
+                    },
+                    child: Text("Remove"),
+                  ): null,
                   subtitle: Text(
                     fullDescrption.length > 20 ? fullDescrption.substring(0, 20) + "..." : fullDescrption,
-                    
                     ),
                 ),
                 Hero(

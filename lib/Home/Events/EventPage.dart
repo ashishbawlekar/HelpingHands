@@ -12,6 +12,12 @@ class _EventPageState extends State<EventPage> with SingleTickerProviderStateMix
   AnimationController floatingButtonColorController;
 
   @override
+  void dispose(){
+    floatingButtonColorController.dispose();
+    super.dispose();
+  }
+
+  @override
   void initState() { 
     super.initState();
     floatingButtonColorController = AnimationController(
@@ -44,7 +50,7 @@ class _EventPageState extends State<EventPage> with SingleTickerProviderStateMix
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.of(context, rootNavigator: true).push(

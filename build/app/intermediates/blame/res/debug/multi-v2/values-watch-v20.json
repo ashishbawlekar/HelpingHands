@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/riki/Desktop/Study Material/Self-Study/Flutter/another/HelpingHands/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "outputFile": "/home/riki/Desktop/Study/Project/HelpingHands/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
-                    "source": "/home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/e9e1eea513a526d9cdc60712f7186abe/res/values-watch-v20/values.xml",
+                    "source": "/home/riki/.gradle/caches/transforms-1/files-1.1/jetified-play-services-auth-16.0.1.aar/2b0beadbbdc41b94ff4d8ece1ffa75af/res/values-watch-v20/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11",
                         "startColumns": "0,0,0,0,0,0,0,0",

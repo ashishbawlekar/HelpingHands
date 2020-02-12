@@ -3,6 +3,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:helping_hands/Home/Events/EventDetails.dart';
 // import 'package:helping_hands/AnimationExampleBasic.dart';
 import 'Home/HomeNGO.dart';
 import 'Registration/Login.dart';
@@ -34,7 +35,7 @@ static Route<dynamic> generateRoute(RouteSettings settings) {
   }
   }
 
-GetIt getIt = GetIt.asNewInstance();
+//GetIt getIt = GetIt.asNewInstance();
 
 void main() => runApp(
    MaterialApp(
@@ -124,16 +125,7 @@ voteDown() {
               // crossAxisAlignment: CrossAxisAlignment.end,
               children: <Widget>[
                 // TestMap(),
-                Text("Votes : $count"),
-                RaisedButton(
-                  child: Text("Toggle OTP"),
-                  onPressed: (){
-                    setState(() {
-                    resendOTP = !resendOTP;  
-                    print(resendOTP);
-                    });
-                  },
-                ),
+                EventDetails(),
                 RaisedButton(
                   child: Text("Vote up! $count"),
                   onPressed: resendOTP ? null : () {

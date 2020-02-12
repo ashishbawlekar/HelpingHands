@@ -174,7 +174,8 @@ class _CreatePostState extends State<CreatePost> with SingleTickerProviderStateM
                               Firestore.instance.collection("/Posts").document()
                                 ..setData({
                                    "imageUrl" : url, 
-                                   "userName" : doc["Name"], 
+                                   "userName" : doc["Name"],
+                                   "userUid" : doc.documentID, 
                                    "description" : controller.text,
                                   //  "postID",
                                    "eventName" : "Test Event",

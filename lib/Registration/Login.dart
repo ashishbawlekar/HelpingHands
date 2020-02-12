@@ -437,7 +437,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                                 UserData.storeData(email, pass, isVol);
                                 NgoUserData.getDataAsFuture().then((ngoData){
                                   print("got ngo data of ${ngoData.ngoName}");
-                                  GetIt.instance.registerSingleton<NgoUserData>(ngoData);
+                                  //GetIt.instance.registerSingleton<NgoUserData>(ngoData);
                                   
                                 });
                                 Navigator.push(context,
@@ -451,7 +451,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                                   ..signInWithEmail(email, pass)
                                   .then((currentUser){
                                     VolunteerUserData.getDataAsFuture().then((volunteerData){
-                                      GetIt.instance.registerSingleton<VolunteerUserData>(volunteerData);
+                                     // GetIt.instance.registerSingleton<VolunteerUserData>(volunteerData);
                                     });  
                                     Navigator.push(
                                       context,

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/riki/Desktop/Study Material/Self-Study/Flutter/another/HelpingHands/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
+            "outputFile": "/home/riki/Desktop/Study/Project/HelpingHands/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/home/riki/.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/fb2e7a2034b08472b9c669fca1d63577/res/values-v24/values-v24.xml",
+                    "source": "/home/riki/.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/839b4cff0d053d43de528aabc521701a/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

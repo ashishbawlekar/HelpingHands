@@ -1,12 +1,17 @@
 buildscript {
     repositories {
         google()
+        maven {
+         url 'http://download.flutter.io'      
+        }
         jcenter()
+        
     }
 
     dependencies {
         classpath 'com.android.tools.build:gradle:3.3.2'
-        classpath 'com.google.gms:google-services:4.2.0'  // Google Services plugin
+        classpath 'com.google.gms:google-services:4.2.0' 
+        // classpath 'com.google.android.gms:play-services-location:16.0.0' // Google Services plugin
 
     }
 }
@@ -21,6 +26,8 @@ allprojects {
     repositories {
         google()
         jcenter()
+    //      maven {
+    // url 'http://download.flutter.io'        }
     }
 }
 

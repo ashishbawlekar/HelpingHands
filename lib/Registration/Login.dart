@@ -430,6 +430,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                               // To prevent people from seeing NGO page without having to sign up as NGO
                               
                               UserData.storeData(email, pass, isVol);
+                             
                               EmailAuth()
                               ..signInWithEmail(email, pass)
                               .then((currentUser){
@@ -466,7 +467,8 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                                 });
                                 print(err);
                               });
-                              }),
+                                
+                          }),
                         
                         RaisedButton(
                           child: isVol ? Text("as Volunteer") : Text("as NGO"),

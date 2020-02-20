@@ -1,10 +1,10 @@
 import 'dart:async';
 
+import 'package:back_button_interceptor/back_button_interceptor.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'FilterPage.dart';
 import 'MapPage.dart';
 // import 'package:latlong/latlong.dart';
 
@@ -44,9 +44,43 @@ LatLng mapInitPosition = LatLng(19.075, 72.877);
     super.dispose();
     
   }
+
+
+  _backButtonConfirmation() {
+  return AlertDialog(
+      title: Text("Are you sure?"),
+      content: Text("You'll lose all unsaved changes"),
+      actions: <Widget>[
+        FlatButton(
+          child: Text("Yes"),
+          onPressed: () {
+            print("False");
+            Navigator.of(context).pop(false);
+            Navigator.pop(context);
+            return false;
+          },
+        ),
+        FlatButton(
+          child: Text("No"),
+          onPressed: () {
+            print("True");
+            Navigator.of(context).pop(true);
+            return true;
+          },
+        )
+      ]);
+}
+
 @override
 void initState(){ 
   super.initState();
+    // BackButtonInterceptor.add((val){
+    //    showDialog(
+    //      context: context,
+    //     builder: (_) => _backButtonConfirmation()
+    //    );
+    //    return false;
+    // });
   markers.add(Marker(
     markerId: MarkerId("EventMarker"),
     draggable: true,
@@ -67,6 +101,8 @@ void initState(){
     end: Colors.blue
   ).animate(progressColorController);
 }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -105,16 +141,16 @@ void initState(){
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              FutureBuilder(
-                future : FirebaseAuth.instance.currentUser(),
-                builder: (BuildContext context, AsyncSnapshot snapshot){
-                  if(snapshot.connectionState == ConnectionState.done) { 
-                    user = snapshot.data; 
-                    // this.document = Firestore.instance.collection("/NgoUsers").document(user.uid).get(); 
-                    }
-                  return Container();
-                },  
-              ),
+              // FutureBuilder(
+              //   future : FirebaseAuth.instance.currentUser(),
+              //   builder: (BuildContext context, AsyncSnapshot snapshot) {
+              //     if(snapshot.connectionState == ConnectionState.done)  { 
+              //       user = snapshot.data; 
+              //       // this.document = await Firestore.instance.collection("/NgoUsers").document(user.uid).get(); 
+              //       }
+              //     return Container();
+              //   },  
+              // ),
               //   FutureBuilder(
               //   future : Firestore.instance.collection("/NgoUsers").document(user.uid).get(),
               //   builder: (BuildContext context, AsyncSnapshot snapshot) {
@@ -346,6 +382,7 @@ void initState(){
                           ),
                         ),
                   );
+                  final user = await FirebaseAuth.instance.currentUser();
                   DocumentSnapshot document = await Firestore.instance.collection("/NgoUsers").document(user.uid).get();
                   Firestore.instance
                     .collection("Events")
@@ -360,6 +397,7 @@ void initState(){
                           "headName" : headName.text,
                           "address" : address.text,
                           "requirement" : int.parse(requirement.text),
+                          "ngoUID" : user.uid
                         }).then((doc){
                           Navigator.of(context, rootNavigator : true).pop();
                         });

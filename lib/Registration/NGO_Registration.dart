@@ -1,30 +1,19 @@
 import 'dart:async';
 import 'dart:core';
-import 'dart:developer';
 import 'dart:io';
-// import 'dart:isolate';
-// import 'package:flutter/image_picker.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
-// import 'package:flutter/material.dart' as prefix0;
 import 'package:flutter/services.dart';
 import 'package:helping_hands/Registration/Authentication.dart';
 import 'package:helping_hands/Home/HomeNGO.dart';
 import 'package:helping_hands/Utils/Cities.dart';
 import 'package:helping_hands/Utils/UserData.dart';
-// import 'package:helping_hands/Registration/Verification.dart';
-// import 'package:image_crop/image_crop.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:helping_hands/Utils/CropImage.dart';
 import 'package:back_button_interceptor/back_button_interceptor.dart';
-
-// class UserLogo{
-//   final logo;
-//   UserLogo(this.logo);
-// }
-
+import 'FieldControl.dart';
 class NgoReg extends StatefulWidget {
   @override
   _NgoRegState createState() => _NgoRegState();
@@ -770,67 +759,5 @@ class _NGO_Reg_FormState extends State<NGO_Reg_Form>
     streamSubscription.cancel();
     final String url = (await downloadurl.ref.getDownloadURL());
     return url;
-  }
-}
-
-class FieldControl extends StatelessWidget {
-  FieldControl({
-    this.label,
-    this.hint,
-    this.controller,
-    this.autofocus = false,
-    this.hideText = false,
-    this.validate,
-    this.keyboardType = TextInputType.text,
-    this.maxlines = 1,
-    this.maxLength,
-    this.expand = false,
-    this.icon,
-    this.hpad = 30.0,
-  });
-  @required
-  var label;
-  var autofocus;
-  var hideText;
-  TextEditingController controller;
-  @required
-  var hint;
-  var validate;
-  var keyboardType;
-  var maxlines;
-  var maxLength;
-  bool expand;
-  var icon;
-  var hpad;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: hpad, vertical: 5.0),
-      decoration: BoxDecoration(
-        border: Border(
-            // right: BorderSide(color: Colors.red),
-            // left: BorderSide(color: Colors.red),
-            ),
-        // color: Colors.red,
-      ),
-      // transform: Matrix4.rotationZ(0.01),
-      child: TextFormField(
-        expands: this.expand,
-        maxLength: this.maxLength,
-        maxLines: this.maxlines,
-        keyboardType: this.keyboardType,
-        validator: this.validate,
-        obscureText: this.hideText,
-        autofocus: this.autofocus,
-        controller: this.controller,
-        decoration: InputDecoration(
-            icon: this.icon,
-            hintText: this.hint,
-            hintStyle: TextStyle(fontWeight: FontWeight.w600),
-            focusColor: Colors.black,
-            labelText: this.label),
-      ),
-    );
   }
 }

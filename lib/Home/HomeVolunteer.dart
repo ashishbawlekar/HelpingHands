@@ -1,6 +1,8 @@
+import 'package:back_button_interceptor/back_button_interceptor.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:helping_hands/Home/Events/EventPage.dart';
 // import 'package:helping_hands/Registration/Authentication.dart';
 import 'package:helping_hands/Home/Posts/PostPage.dart';
 import 'package:helping_hands/Registration/Login.dart';
@@ -131,9 +133,40 @@ class _HomeVolunteerState extends State<HomeVolunteer> with TickerProviderStateM
   AnimationController _drawerController;
   Animation _drawerRadius;
 
+   _backButtonConfirmation() {
+    return AlertDialog(
+        title: Text("Are you sure?"),
+        content: Text("You want to log out?"),
+        actions: <Widget>[
+          FlatButton(
+            child: Text("Yes"),
+            onPressed: () {
+              print("False");
+              Navigator.of(context).pop(false);
+              Navigator.pop(context);
+              return false;
+            },
+          ),
+          FlatButton(
+            child: Text("No"),
+            onPressed: () {
+              print("True");
+              Navigator.of(context).pop(true);
+              return true;
+            },
+          )
+        ]);
+  }
   @override
   void initState() { 
      super.initState();
+     BackButtonInterceptor.add((val){
+       showDialog(
+         context: context,
+        builder: (_) => _backButtonConfirmation()
+       );
+       return true;
+     });
     _tabController = TabController(
     vsync: this,
     initialIndex: 0,
@@ -193,7 +226,7 @@ class _HomeVolunteerState extends State<HomeVolunteer> with TickerProviderStateM
           controller: _tabController,
           children: <Widget>[
             PostPage(),
-            Text("Events"),
+            EventPage(),
           ],
         ),
       ),

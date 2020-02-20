@@ -10,8 +10,8 @@ import 'PostDetails.dart';
 import 'package:provider/provider.dart';
 class PostPage extends StatefulWidget {
   // UserData userData;
-  PostPage();
- 
+  PostPage({this.key});
+  GlobalKey<ScaffoldState> key;
   @override
   _PostPageState createState() => _PostPageState();
 }
@@ -38,71 +38,73 @@ void dispose() {
 
   @override
   Widget build(BuildContext context) {
-    return StreamProvider<QuerySnapshot>.value(
-          value: Post().posts,
-          child: Scaffold(
-           floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
-          floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
-          floatingActionButton: FloatingActionButton(
-            backgroundColor: Colors.blue,
-            child: Icon(Icons.control_point),
-            onPressed: (){
-              Navigator.of(context, rootNavigator: true)
-                .push(
-                  MaterialPageRoute(
-                    builder: (_) => CreatePost()
-                  ),
-                );
-            },
-            elevation: 20.0,
-            focusColor: Colors.red,  
-        ),
-        body: FutureBuilder(
-          // future: Future.delayed(Duration(seconds: 2)),
-          future: FirebaseAuth.instance.currentUser(),
-          builder: (context, snapshot) {
-            final posts = Provider.of<QuerySnapshot>(context);
-            
-            // for(var i = 0; i < posts.documents.length; i++)
-            // {
-            //   print(posts.documents[i].data);
-            // }
-            if(posts == null){
-              return Center(
-                child: Container(
-                  child: Row(
-                    children: <Widget>[
-                      Text('Loading'),
-                      // LinearProgressIndicator(
-                      //   backgroundColor: Colors.greenAccent,
-                      //   value: 100,
-                      // ),
-                    ],
-                  ),
-                ),
-              );
-            } 
-            else{
-            this.currentUser = snapshot.data;
-            return ListView.builder(
-              itemCount: posts.documents.length,
-              itemBuilder: (_, count){
-                return Post(
-                  ngoName: posts.documents[count].data["ngoName"], // == null? " " : posts.documents[count].data["ngoName"] ,
-                  imageUrl: posts.documents[count].data["imageUrl"],
-                  description: posts.documents[count].data["description"],
-                  eventName: posts.documents[count].data["eventName"],
-                  userName: posts.documents[count].data["userName"], // ==  null? " ": posts.documents[count].data["Name"],
-                  postID: posts.documents[count].documentID,
-                  userUid: posts.documents[count].data["userUid"],
-                  currentUser : this.currentUser,
-                );
+    return GestureDetector(
+          child: StreamProvider<QuerySnapshot>.value(
+            value: Post().posts,
+            child: Scaffold(
+             floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
+            floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+            floatingActionButton: FloatingActionButton(
+              backgroundColor: Colors.blue,
+              child: Icon(Icons.control_point),
+              onPressed: (){
+                Navigator.of(context, rootNavigator: true)
+                  .push(
+                    MaterialPageRoute(
+                      builder: (_) => CreatePost()
+                    ),
+                  );
               },
-            // ),
-      // ),
-    );
+              elevation: 20.0,
+              focusColor: Colors.red,  
+          ),
+          body: FutureBuilder(
+            // future: Future.delayed(Duration(seconds: 2)),
+            future: FirebaseAuth.instance.currentUser(),
+            builder: (context, snapshot) {
+              final posts = Provider.of<QuerySnapshot>(context);
+              
+              // for(var i = 0; i < posts.documents.length; i++)
+              // {
+              //   print(posts.documents[i].data);
+              // }
+              if(posts == null){
+                return Center(
+                  child: Container(
+                    child: Row(
+                      children: <Widget>[
+                        Text('Loading'),
+                        // LinearProgressIndicator(
+                        //   backgroundColor: Colors.greenAccent,
+                        //   value: 100,
+                        // ),
+                      ],
+                    ),
+                  ),
+                );
+              } 
+              else{
+              this.currentUser = snapshot.data;
+              return ListView.builder(
+                itemCount: posts.documents.length,
+                itemBuilder: (_, count){
+                  return Post(
+                    ngoName: posts.documents[count].data["ngoName"], // == null? " " : posts.documents[count].data["ngoName"] ,
+                    imageUrl: posts.documents[count].data["imageUrl"],
+                    description: posts.documents[count].data["description"],
+                    eventName: posts.documents[count].data["eventName"],
+                    userName: posts.documents[count].data["userName"], // ==  null? " ": posts.documents[count].data["Name"],
+                    postID: posts.documents[count].documentID,
+                    userUid: posts.documents[count].data["userUid"],
+                    currentUser : this.currentUser,
+                  );
+                },
+              // ),
+        // ),
+      );
+              }
             }
-          }
+          ),
         ),
       ),
     );

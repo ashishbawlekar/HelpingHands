@@ -4,6 +4,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:helping_hands/Home/Events/EventDetails.dart';
+import 'package:helping_hands/Home/Events/EventViewer.dart';
 // import 'package:helping_hands/AnimationExampleBasic.dart';
 import 'Home/HomeNGO.dart';
 import 'Registration/Login.dart';
@@ -125,7 +126,8 @@ voteDown() {
               // crossAxisAlignment: CrossAxisAlignment.end,
               children: <Widget>[
                 // TestMap(),
-                EventDetails(),
+                // EventViewer(),
+                // EventViewer(),
                 RaisedButton(
                   child: Text("Vote up! $count"),
                   onPressed: resendOTP ? null : () {

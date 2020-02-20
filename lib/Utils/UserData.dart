@@ -67,7 +67,7 @@ UserData dummyNgo = NgoUserData(
 class NgoUserData extends UserData{
   final String ngoName;
   final String ngoRepName;
-  var  ngoLogo;
+  Image ngoLogo;
   String ngoLogoUrl;
   final String ngoDescription;
   final String ngoWebsite;

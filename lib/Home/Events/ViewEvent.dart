@@ -8,8 +8,7 @@ class ViewEvents extends StatefulWidget {
 class _ViewEventsState extends State<ViewEvents> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
         floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
         floatingActionButton: FloatingActionButton(
@@ -33,7 +32,6 @@ class _ViewEventsState extends State<ViewEvents> {
 
           ),
         ),
-      ),
     );
   }
 }

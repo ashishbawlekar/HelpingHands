@@ -94,6 +94,7 @@ class _EventPageState extends State<EventPage> with SingleTickerProviderStateMix
                       child: Text("Reload"),
                       onPressed: (){
                         print("I would reload If I could");
+                        setState(() {});
                       },
                     )
                   ],

@@ -189,9 +189,7 @@ class _HomeVolunteerState extends State<HomeVolunteer> with TickerProviderStateM
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Home",
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           // title: Text("Home"),
           // leading: IconButton(
@@ -229,7 +227,6 @@ class _HomeVolunteerState extends State<HomeVolunteer> with TickerProviderStateM
             EventPage(),
           ],
         ),
-      ),
     );
   }
 }

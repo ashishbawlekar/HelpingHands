@@ -76,6 +76,17 @@ flutter:
      - assets/g.png
      - assets/f.png
      - assets/Logo.png
+     - assets/Ranks/rank1.png
+     - assets/Ranks/rank2.png
+     - assets/Ranks/rank3.png
+     - assets/Ranks/rank4.png
+     - assets/Ranks/rank5.png
+     - assets/Ranks/rank6.png
+     - assets/Ranks/rank7.png
+     - assets/Ranks/rank8.png
+     - assets/Ranks/rank9.png
+     - assets/Ranks/rank10.png
+     - assets/Ranks/rank11.png
 
   #  - images/a_dot_ham.jpeg
 

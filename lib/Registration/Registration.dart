@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:helping_hands/Utils/Routes.dart';
 import 'NGO_Registration.dart';
 import 'Volunteer_Registration.dart';
 
@@ -44,11 +45,7 @@ class Registration extends StatelessWidget {
                   Divider(),
                    GestureDetector(
                      onTap: (){
-                      Navigator.push(context, 
-                      MaterialPageRoute(
-                       builder: (context) => VolunteerForm(),
-                      )
-                      );
+                      Navigator.pushReplacementNamed(context, Routes.ngoRegistration);
                      }, 
                     child: Container(
                      decoration: BoxDecoration(

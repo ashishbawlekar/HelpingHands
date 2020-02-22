@@ -4,10 +4,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
 import 'package:helping_hands/Home/HomeVolunteer.dart';
 import 'package:helping_hands/Registration/Authentication.dart';
 import 'package:helping_hands/Home/HomeNGO.dart';
+import 'package:helping_hands/Utils/Routes.dart';
 import 'package:helping_hands/Utils/UserData.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:toast/toast.dart';
@@ -101,7 +103,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
         _controllerR.reverse();
       }else if(status == AnimationStatus.dismissed){
         print("Animation Finished!");
-          Navigator.popAndPushNamed(context, "/Registration");       
+          Navigator.pushNamed(context, Routes.registration);       
       }
     });
     
@@ -153,12 +155,7 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
   var init, distance, stackElevation=10.0;
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Login',
-      theme: ThemeData(
-        primaryColor: Colors.white,
-      ),
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Text(
             "Login",
@@ -441,11 +438,8 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                                   //GetIt.instance.registerSingleton<NgoUserData>(ngoData);
                                   
                                 });
-                                Navigator.push(context,
-                                  MaterialPageRoute(
-                                   builder: (context) => HomeNgo(),
-                                  ),
-                                );
+                                Navigator.pushReplacementNamed(context, Routes.homeNGO);
+
                                 }else{
                                   UserData.storeData(email, pass, isVol);
                                   EmailAuth()
@@ -454,14 +448,15 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
                                     VolunteerUserData.getDataAsFuture().then((volunteerData){
                                      // GetIt.instance.registerSingleton<VolunteerUserData>(volunteerData);
                                     });  
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(builder: (_) => HomeVolunteer()) 
-                                      );
+                                    Navigator.pushReplacementNamed(context, Routes.homeVol);
                                   });
                                   
                                 }
                               }).catchError((err){
+                                if(err.details != null){
+                                  Toast.show(err.details, context);
+                                  print(err.details);
+                                } 
                                 setState(() {
                                   invalidData = true;
                                 });
@@ -512,8 +507,6 @@ class _LoginState extends State<Login> with TickerProviderStateMixin {
               ),
             ),
           ),
-        ),
-        
       );
   }
 }

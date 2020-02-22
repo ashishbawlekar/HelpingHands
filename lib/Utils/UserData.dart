@@ -126,9 +126,9 @@ class NgoUserData extends UserData{
       throw Exception("Unable to load document");
     }
   @override
-  @override
+  // @override
   String toString() {
-  return "This data belongs to $ngoName which is represented by $ngoRepName located at $ngoAddress. You can contact us at $ngoContact.";
+  return "{Name: $ngoName, ImageURL: $ngoLogoUrl, City: $ngoCity}";
    }
     static Future<NgoUserData> getDataAsFuture() async {
       final user = await FirebaseAuth.instance.currentUser();

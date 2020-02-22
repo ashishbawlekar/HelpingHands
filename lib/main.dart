@@ -3,8 +3,14 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:helping_hands/About.dart';
 import 'package:helping_hands/Home/Events/EventDetails.dart';
+import 'package:helping_hands/Home/Events/EventPage.dart';
 import 'package:helping_hands/Home/Events/EventViewer.dart';
+import 'package:helping_hands/Home/HomeVolunteer.dart';
+import 'package:helping_hands/Home/Posts/PostPage.dart';
+import 'package:helping_hands/Home/UpdateProfile.dart';
+import 'package:helping_hands/Utils/Routes.dart';
 // import 'package:helping_hands/AnimationExampleBasic.dart';
 import 'Home/HomeNGO.dart';
 import 'Registration/Login.dart';
@@ -12,6 +18,7 @@ import 'Registration/Login.dart';
 
 import 'Registration/NGO_Registration.dart';
 import 'Registration/Registration.dart';
+import 'Utils/Medals.dart';
 
 class Router{
 static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -40,9 +47,10 @@ static Route<dynamic> generateRoute(RouteSettings settings) {
 
 void main() => runApp(
    MaterialApp(
+      // onUnknownRoute: (settings) => MaterialPageRoute(builder: (_) => Medals()),
       title: "Vote Up",
       // home: MyApp(),
-      initialRoute: '/',
+      initialRoute: Routes.start,
       home: MyApp(),
       // routes: {
       //   '/' : (context) => MyApp(),
@@ -53,7 +61,18 @@ void main() => runApp(
       //   '/HomeNGO' : (context) => HomeNgo(),
       //   '/Registration/NgoReg/HomeNGO' : (context) => HomeNgo(),
       // },
-      onGenerateRoute: Router.generateRoute,
+      routes: <String, WidgetBuilder>{
+        Routes.homeNGO : (_) => HomeNgo(),
+        Routes.homeVol : (_) => HomeVolunteer(),
+        Routes.login : (_) => Login(),
+        Routes.registration : (_) => Registration(),
+        Routes.ngoRegistration : (_) => NgoReg(),
+        Routes.events : (_) => EventPage(),
+        Routes.posts : (_) => PostPage(),
+        Routes.updateProfile : (_) => UpdateNGOProfile(), 
+        Routes.about : (_) => AboutPage(),
+        // Routes.start : (_) => MyApp(),   
+      },
 
       )
 );
@@ -210,7 +229,7 @@ voteDown() {
                                 //  context,
                                 //  MaterialPageRoute(builder: (context) => GetTextApp()),
                                 // );
-                                Navigator.pushNamed(context, '/Login');
+                                Navigator.pushNamed(context, Routes.login);
                             },
                                 padding: const EdgeInsets.all(10.0),
                                 color: Color.fromARGB(100, 250, 0, 0),

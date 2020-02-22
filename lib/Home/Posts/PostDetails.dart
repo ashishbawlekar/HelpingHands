@@ -77,9 +77,7 @@ class _PostDetailsState extends State<PostDetails> with SingleTickerProviderStat
 //  git@github.com:Riki432/HelpingHands.git 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "Post Details",
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           backgroundColor: anim.value,
         ),
@@ -245,7 +243,6 @@ class _PostDetailsState extends State<PostDetails> with SingleTickerProviderStat
           ),
              ),
         ),
-      ),
     );
   }
 }

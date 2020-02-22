@@ -46,8 +46,7 @@ class _CreatePostState extends State<CreatePost> with SingleTickerProviderStateM
   }
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         appBar: AppBar(
           title: Text("Create Post"),
         ),
@@ -199,7 +198,6 @@ class _CreatePostState extends State<CreatePost> with SingleTickerProviderStateM
               ),
           ),
         ),
-      ),
     );
   }
 

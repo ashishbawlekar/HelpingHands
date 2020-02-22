@@ -66,8 +66,7 @@ Future<bool> _onWillPop(){
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: WillPopScope(
+    return WillPopScope(
         onWillPop: _onWillPop,
           child: Scaffold(
           appBar: AppBar(
@@ -175,7 +174,6 @@ Future<bool> _onWillPop(){
             ),
           ),
         ),
-      ),
     );
   }
 }
